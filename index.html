@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRONHUB — Bikes Bought & Sold</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="nav-wrap">
+    <div class="brand" onclick="goTo('home')" style="cursor:pointer;"><span class="dot">⛓</span> IRONHUB</div>
+    <nav class="links">
+      <a href="#" onclick="goTo('home')" data-view="home">Home</a>
+      <a href="#" onclick="goTo('shop')" data-view="shop">Shop</a>
+      <a href="#" onclick="goTo('sell')" data-view="sell">Sell a Bike</a>
+      <a href="#" onclick="goTo('dashboard')" data-view="dashboard">Dashboard</a>
+    </nav>
+    <div class="nav-right">
+      <button class="icon-btn" onclick="openCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+      <span id="authArea"></span>
+    </div>
+  </div>
+</header>
+<div class="tread"></div>
+
+<main>
+
+  <!-- ===================== HOME VIEW ===================== -->
+  <section class="view active" id="view-home">
+    <div class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Buy / Sell / Ride</div>
+          <h1>Real bikes.<br>Real riders.<br><span>Zero showroom games.</span></h1>
+          <p class="lead">IronHub connects everyday riders buying and selling road, mountain, electric and vintage bikes — no dealer markup, no fine print.</p>
+          <div class="hero-ctas">
+            <button class="btn-primary" onclick="goTo('shop')">Browse Bikes</button>
+            <button class="btn-ghost" onclick="goTo('sell')">List Your Bike</button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><div class="num">1,240+</div><div class="lbl">Bikes Sold</div></div>
+            <div class="stat"><div class="num">38</div><div class="lbl">Cities</div></div>
+            <div class="stat"><div class="num">4.8★</div><div class="lbl">Rider Rating</div></div>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <span class="tag-stamp">Listing #0182</span>
+          <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=900&q=80" alt="Mountain bike on trail">
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div><h2>Featured Listings</h2><p>Hand-picked bikes currently getting the most attention from riders.</p></div>
+        <button class="btn-ghost" onclick="goTo('shop')">View All →</button>
+      </div>
+      <div class="grid" id="featuredGrid"></div>
+    </div>
+
+    <div class="section" style="border-bottom:none;">
+      <div class="sell-banner">
+        <div>
+          <h3>Got a bike collecting dust?</h3>
+          <p>List it on IronHub in under two minutes. Add real photos, set your price, and reach riders actively looking to buy.</p>
+        </div>
+        <button class="btn-primary" onclick="goTo('sell')">Start Selling</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SHOP VIEW ===================== -->
+  <section class="view" id="view-shop">
+    <div class="section-head" style="margin-top:40px;">
+      <div><h2>All Bikes</h2><p>Filter by category to find the right ride.</p></div>
+    </div>
+    <div class="filter-bar" id="filterBar"></div>
+    <div class="grid" id="shopGrid"></div>
+  </section>
+
+  <!-- ===================== SELL VIEW ===================== -->
+  <section class="view" id="view-sell">
+    <div class="auth-wrap" style="max-width:560px;">
+      <div class="auth-card">
+        <h2>List Your Bike</h2>
+        <p class="sub">Paste a real photo link (e.g. copied from Chrome — right click an image → "Copy image address") and fill in the details below.</p>
+        <div class="form-msg" id="sellMsg"></div>
+        <form id="sellForm">
+          <div class="field">
+            <label>Bike Title</label>
+            <input type="text" id="sellTitle" placeholder="e.g. Trek Marlin 7 Mountain Bike" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label>Category</label>
+              <select id="sellCategory">
+                <option>Mountain</option>
+                <option>Road</option>
+                <option>Electric</option>
+                <option>Vintage</option>
+                <option>Kids</option>
+                <option>Yamaha</option>
+                <option>KTM</option>
+                <option>Honda</option>
+                <option>Bajaj</option>
+                <option>Royal Enfield</option>
+                <option>Triumph</option>
+                <option>Benelli</option>
+                <option>Ducati</option>
+                <option>Italian Bike</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Price (USD)</label>
+              <input type="number" id="sellPrice" placeholder="450" min="1" required>
+            </div>
+          </div>
+          <div class="field">
+            <label>Condition / Specs</label>
+            <input type="text" id="sellSpecs" placeholder="e.g. 21-speed, frame size M, used 1 year">
+          </div>
+          <div class="field">
+            <label>Image URL (paste link copied from Chrome)</label>
+            <input type="url" id="sellImage" placeholder="https://..." required oninput="previewListingImage()">
+            <div class="listing-photo-preview" id="listingPreview">Photo preview will appear here</div>
+          </div>
+          <button class="btn-primary btn-block" type="submit">Publish Listing</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LOGIN VIEW ===================== -->
+  <section class="view" id="view-login">
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <h2>Welcome back</h2>
+        <p class="sub">Log in to manage orders and listings.</p>
+        <div class="form-msg" id="loginMsg"></div>
+        <form id="loginForm">
+          <div class="field">
+            <label>Email</label>
+            <input type="email" id="loginEmail" required>
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" id="loginPassword" required>
+          </div>
+          <button class="btn-primary btn-block" type="submit">Log In</button>
+        </form>
+        <p class="auth-switch">New here? <a href="#" onclick="goTo('signup')">Create an account</a></p>
+        <p class="center-note">Demo tip: sign up first — accounts are stored locally in your browser.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SIGNUP VIEW ===================== -->
+  <section class="view" id="view-signup">
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <h2>Create your account</h2>
+        <p class="sub">Join IronHub to buy or sell bikes.</p>
+        <div class="form-msg" id="signupMsg"></div>
+        <form id="signupForm">
+          <div class="field">
+            <label>Full Name</label>
+            <input type="text" id="signupName" required>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" id="signupEmail" required>
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" id="signupPassword" required minlength="4">
+          </div>
+          <button class="btn-primary btn-block" type="submit">Sign Up</button>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="#" onclick="goTo('login')">Log in</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DASHBOARD VIEW ===================== -->
+  <section class="view" id="view-dashboard">
+    <div class="dash-grid" style="margin-top:40px;">
+      <div class="dash-side">
+        <div class="dash-avatar" id="dashAvatar">?</div>
+        <h4 id="dashName">Guest</h4>
+        <div class="email" id="dashEmail">Not logged in</div>
+        <div class="dash-nav">
+          <button class="active" data-panel="overview" onclick="setDashPanel('overview')">Overview</button>
+          <button data-panel="orders" onclick="setDashPanel('orders')">My Orders</button>
+          <button data-panel="listings" onclick="setDashPanel('listings')">My Listings</button>
+          <button data-panel="profile" onclick="setDashPanel('profile')">Profile</button>
+        </div>
+      </div>
+      <div class="dash-panel" id="dashPanel"></div>
+    </div>
+  </section>
+
+  <!-- ===================== CHECKOUT VIEW ===================== -->
+  <section class="view" id="view-checkout">
+    <div class="section-head" style="margin-top:40px;">
+      <div><h2>Checkout</h2><p>Review your order and complete payment.</p></div>
+    </div>
+    <div class="checkout-grid">
+      <div>
+        <div class="summary-card" style="margin-bottom:20px;">
+          <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:14px;">Shipping Details</h3>
+          <div class="field-row">
+            <div class="field"><label>Full Name</label><input type="text" id="shipName" required></div>
+            <div class="field"><label>Phone</label><input type="text" id="shipPhone" required></div>
+          </div>
+          <div class="field"><label>Address</label><input type="text" id="shipAddress" required></div>
+          <div class="field-row">
+            <div class="field"><label>City</label><input type="text" id="shipCity" required></div>
+            <div class="field"><label>ZIP Code</label><input type="text" id="shipZip" required></div>
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:14px;">Payment Method</h3>
+          <div class="pay-methods">
+            <button class="pay-method active" data-method="card" onclick="setPayMethod('card')">Card</button>
+            <button class="pay-method" data-method="upi" onclick="setPayMethod('upi')">UPI</button>
+            <button class="pay-method" data-method="cod" onclick="setPayMethod('cod')">Cash on Delivery</button>
+          </div>
+
+          <div id="payCardFields">
+            <div class="card-art">
+              <div class="row"><span>IRONHUB CARD</span><span>💳</span></div>
+              <div class="num" id="cardArtNum">•••• •••• •••• ••••</div>
+              <div class="row"><span id="cardArtName">CARD HOLDER</span><span id="cardArtExp">MM/YY</span></div>
+            </div>
+            <div class="field"><label>Card Number</label><input type="text" id="cardNumber" placeholder="4242 4242 4242 4242" maxlength="19" oninput="formatCardNumber(this)"></div>
+            <div class="field-row">
+              <div class="field"><label>Card Holder Name</label><input type="text" id="cardName" placeholder="Name on card"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label>Expiry</label><input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5"></div>
+              <div class="field"><label>CVV</label><input type="password" id="cardCvv" placeholder="•••" maxlength="3"></div>
+            </div>
+          </div>
+          <div id="payUpiFields" style="display:none;">
+            <div class="field"><label>UPI ID</label><input type="text" id="upiId" placeholder="yourname@bank"></div>
+          </div>
+          <div id="payCodNote" style="display:none;color:var(--bone-dim);font-size:13px;padding:10px 0;">Pay in cash when your bike arrives. A small COD verification fee may apply.</div>
+
+          <div class="form-msg" id="checkoutMsg"></div>
+          <button class="btn-primary btn-block" onclick="placeOrder()" style="margin-top:10px;">Place Order & Pay</button>
+        </div>
+      </div>
+
+      <div class="summary-card">
+        <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:14px;">Order Summary</h3>
+        <div id="checkoutItems"></div>
+        <div class="summary-line"><span>Subtotal</span><span id="sumSubtotal">$0</span></div>
+        <div class="summary-line"><span>Shipping</span><span id="sumShipping">$25</span></div>
+        <div class="summary-line"><span>Tax (8%)</span><span id="sumTax">$0</span></div>
+        <div class="summary-line total"><span>Total</span><span id="sumTotal">$0</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ORDER SUCCESS VIEW ===================== -->
+  <section class="view" id="view-success">
+    <div class="auth-wrap" style="text-align:center;">
+      <div class="auth-card">
+        <div style="font-size:50px;margin-bottom:10px;">✅</div>
+        <h2>Order Confirmed!</h2>
+        <p class="sub" id="successText">Your bike is on its way.</p>
+        <button class="btn-primary btn-block" onclick="goTo('dashboard'); setDashPanel('orders');">View My Orders</button>
+        <button class="btn-ghost btn-block" style="margin-top:10px;" onclick="goTo('shop')">Continue Shopping</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="tread"></div>
+<footer>
+  <div class="footer-wrap">
+    <div><strong style="font-family:var(--font-display);color:var(--bone);">IRONHUB</strong> — built by riders, for riders.</div>
+    <div>© 2026 IronHub Demo. All bikes shown use real publicly linked photos.</div>
+  </div>
+</footer>
+
+<!-- ===================== CART DRAWER ===================== -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeCart()"></div>
+<div class="drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <h3>Your Cart</h3>
+    <button class="drawer-close" onclick="closeCart()">×</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-foot">
+    <div class="total-row"><span>Total</span><span id="drawerTotal">$0</span></div>
+    <button class="btn-primary btn-block" onclick="goToCheckout()">Checkout</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

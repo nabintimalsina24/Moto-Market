@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRONHUB — Bikes Bought & Sold</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===================== TOKENS ===================== */
+:root{
+  --asphalt:#15130F;
+  --panel:#1F1C16;
+  --panel2:#262219;
+  --line:#3A3327;
+  --bone:#ECE3CF;
+  --bone-dim:#B8AD96;
+  --rust:#D9531E;
+  --rust-dark:#A23F16;
+  --brass:#C9A227;
+  --green-ok:#5C8A4E;
+  --red-err:#C0392B;
+  --radius:2px;
+  --font-display:'Archivo Black', sans-serif;
+  --font-mech:'Rajdhani', sans-serif;
+  --font-body:'Inter', sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--asphalt);
+  color:var(--bone);
+  font-family:var(--font-body);
+  line-height:1.5;
+  min-height:100vh;
+}
+a{color:inherit;text-decoration:none;}
+button{font-family:var(--font-mech);cursor:pointer;border:none;background:none;color:inherit;}
+input,select,textarea{font-family:var(--font-body);}
+:focus-visible{outline:2px solid var(--brass);outline-offset:2px;}
+img{display:block;max-width:100%;}
+
+/* tire tread divider */
+.tread{
+  height:10px;
+  background-image:repeating-linear-gradient(135deg, var(--line) 0 6px, transparent 6px 14px);
+  opacity:.5;
+}
+
+/* ===================== HEADER ===================== */
+header{
+  position:sticky;top:0;z-index:50;
+  background:var(--asphalt);
+  border-bottom:1px solid var(--line);
+}
+.nav-wrap{
+  max-width:1180px;margin:0 auto;padding:16px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.brand{
+  font-family:var(--font-display);
+  font-size:22px;letter-spacing:1px;
+  display:flex;align-items:center;gap:10px;
+}
+.brand .dot{color:var(--rust);}
+nav.links{display:flex;gap:28px;align-items:center;font-family:var(--font-mech);font-weight:600;font-size:15px;letter-spacing:.5px;text-transform:uppercase;}
+nav.links a{color:var(--bone-dim);transition:color .15s;position:relative;padding:4px 0;}
+nav.links a:hover, nav.links a.active{color:var(--bone);}
+nav.links a.active::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--rust);}
+.nav-right{display:flex;align-items:center;gap:16px;}
+.icon-btn{
+  display:flex;align-items:center;gap:6px;
+  font-family:var(--font-mech);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.5px;
+  color:var(--bone);padding:8px 14px;border:1px solid var(--line);border-radius:var(--radius);
+  transition:border-color .15s, background .15s;
+}
+.icon-btn:hover{border-color:var(--rust);background:var(--panel);}
+.cart-count{
+  background:var(--rust);color:var(--asphalt);font-size:11px;font-weight:700;
+  border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;
+}
+.btn-primary{
+  background:var(--rust);color:var(--asphalt);font-weight:700;
+  padding:10px 20px;border-radius:var(--radius);text-transform:uppercase;letter-spacing:.5px;font-size:14px;
+  transition:background .15s, transform .1s;
+}
+.btn-primary:hover{background:#E8662E;}
+.btn-primary:active{transform:scale(.98);}
+.btn-ghost{
+  border:1px solid var(--line);padding:10px 20px;border-radius:var(--radius);
+  text-transform:uppercase;font-size:14px;letter-spacing:.5px;font-weight:600;color:var(--bone-dim);
+  transition:all .15s;
+}
+.btn-ghost:hover{border-color:var(--bone-dim);color:var(--bone);}
+.btn-block{width:100%;display:block;text-align:center;}
+
+/* mobile nav toggle */
+.burger{display:none;font-size:24px;color:var(--bone);}
+@media (max-width:860px){
+  nav.links{display:none;}
+  .burger{display:block;}
+}
+
+/* ===================== LAYOUT ===================== */
+main{max-width:1180px;margin:0 auto;padding:0 24px 80px;}
+.view{display:none;}
+.view.active{display:block;}
+
+/* ===================== HERO ===================== */
+.hero{
+  position:relative;
+  padding:90px 0 70px;
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;}}
+.eyebrow{
+  font-family:var(--font-mech);color:var(--rust);text-transform:uppercase;letter-spacing:3px;font-size:13px;font-weight:700;
+  margin-bottom:18px;display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:'';width:28px;height:2px;background:var(--rust);}
+.hero h1{
+  font-family:var(--font-display);
+  font-size:clamp(40px,6vw,64px);
+  line-height:1.04;
+  letter-spacing:.5px;
+  margin-bottom:22px;
+}
+.hero h1 span{color:var(--rust);}
+.hero p.lead{color:var(--bone-dim);font-size:17px;max-width:480px;margin-bottom:32px;}
+.hero-ctas{display:flex;gap:14px;margin-bottom:40px;}
+.hero-stats{display:flex;gap:36px;}
+.stat .num{font-family:var(--font-display);font-size:28px;color:var(--bone);}
+.stat .lbl{font-family:var(--font-mech);font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--bone-dim);}
+.hero-photo{
+  position:relative;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  aspect-ratio:4/3.2;
+}
+.hero-photo img{width:100%;height:100%;object-fit:cover;}
+.tag-stamp{
+  position:absolute;top:16px;left:16px;
+  background:var(--asphalt);border:1px solid var(--brass);color:var(--brass);
+  font-family:var(--font-mech);font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;
+  padding:6px 12px;border-radius:var(--radius);
+}
+
+/* ===================== SECTION HEADERS ===================== */
+.section{padding:60px 0;border-bottom:1px solid var(--line);}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:32px;gap:20px;flex-wrap:wrap;}
+.section-head h2{font-family:var(--font-display);font-size:30px;letter-spacing:.5px;}
+.section-head p{color:var(--bone-dim);font-size:14px;max-width:420px;}
+
+/* ===================== FILTER BAR ===================== */
+.filter-bar{
+  display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px;
+}
+.chip{
+  font-family:var(--font-mech);font-size:13px;text-transform:uppercase;letter-spacing:.5px;font-weight:600;
+  padding:8px 16px;border:1px solid var(--line);border-radius:20px;color:var(--bone-dim);
+  transition:all .15s;
+}
+.chip:hover{border-color:var(--bone-dim);}
+.chip.active{background:var(--rust);border-color:var(--rust);color:var(--asphalt);}
+
+/* ===================== PRODUCT GRID ===================== */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+@media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:620px){.grid{grid-template-columns:1fr;}}
+
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  transition:border-color .2s, transform .2s;
+  display:flex;flex-direction:column;
+}
+.card:hover{border-color:var(--rust);transform:translateY(-3px);}
+.card-photo{position:relative;aspect-ratio:4/3;overflow:hidden;background:#000;}
+.card-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.card:hover .card-photo img{transform:scale(1.06);}
+.card-badge{
+  position:absolute;top:10px;left:10px;background:var(--asphalt);color:var(--brass);
+  font-family:var(--font-mech);font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+  padding:4px 9px;border-radius:var(--radius);border:1px solid var(--brass);
+}
+.card-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1;}
+.card-cat{font-family:var(--font-mech);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rust);font-weight:700;}
+.card-title{font-family:var(--font-display);font-size:17px;letter-spacing:.2px;}
+.card-spec{font-size:12.5px;color:var(--bone-dim);}
+.card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px;}
+.card-price{font-family:var(--font-mech);font-weight:700;font-size:19px;}
+.card-price .cur{font-size:13px;color:var(--bone-dim);}
+.add-btn{
+  background:transparent;border:1px solid var(--rust);color:var(--rust);
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+  padding:8px 13px;border-radius:var(--radius);transition:all .15s;
+}
+.add-btn:hover{background:var(--rust);color:var(--asphalt);}
+.add-btn:disabled{opacity:.5;cursor:default;}
+
+/* ===================== SELL CTA ===================== */
+.sell-banner{
+  background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+}
+.sell-banner h3{font-family:var(--font-display);font-size:24px;margin-bottom:8px;}
+.sell-banner p{color:var(--bone-dim);font-size:14px;max-width:480px;}
+
+/* ===================== FOOTER ===================== */
+footer{border-top:1px solid var(--line);padding:40px 24px;}
+.footer-wrap{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;color:var(--bone-dim);font-size:13px;}
+
+/* ===================== AUTH FORMS ===================== */
+.auth-wrap{max-width:420px;margin:60px auto;}
+.auth-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:36px;}
+.auth-card h2{font-family:var(--font-display);font-size:26px;margin-bottom:6px;}
+.auth-card .sub{color:var(--bone-dim);font-size:13px;margin-bottom:28px;}
+.field{margin-bottom:18px;}
+.field label{display:block;font-family:var(--font-mech);font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--bone-dim);margin-bottom:6px;font-weight:600;}
+.field input, .field select, .field textarea{
+  width:100%;background:var(--asphalt);border:1px solid var(--line);color:var(--bone);
+  padding:11px 13px;border-radius:var(--radius);font-size:14px;transition:border-color .15s;
+}
+.field input:focus, .field select:focus, .field textarea:focus{border-color:var(--rust);}
+.field-error{color:var(--red-err);font-size:12px;margin-top:5px;display:none;}
+.field-row{display:flex;gap:12px;}
+.field-row .field{flex:1;}
+.auth-switch{margin-top:20px;text-align:center;font-size:13px;color:var(--bone-dim);}
+.auth-switch a{color:var(--rust);font-weight:600;}
+.form-msg{
+  padding:10px 13px;border-radius:var(--radius);font-size:13px;margin-bottom:18px;display:none;
+}
+.form-msg.error{background:rgba(192,57,43,.15);border:1px solid var(--red-err);color:#ff8b7c;display:block;}
+.form-msg.success{background:rgba(92,138,78,.15);border:1px solid var(--green-ok);color:#9fd98a;display:block;}
+
+/* ===================== DASHBOARD ===================== */
+.dash-grid{display:grid;grid-template-columns:240px 1fr;gap:30px;}
+@media(max-width:760px){.dash-grid{grid-template-columns:1fr;}}
+.dash-side{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px;height:fit-content;}
+.dash-avatar{width:56px;height:56px;border-radius:50%;background:var(--rust);color:var(--asphalt);font-family:var(--font-display);font-size:20px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+.dash-side h4{font-family:var(--font-mech);font-size:15px;margin-bottom:2px;}
+.dash-side .email{font-size:12px;color:var(--bone-dim);margin-bottom:20px;word-break:break-all;}
+.dash-nav button{
+  display:block;width:100%;text-align:left;padding:10px 12px;border-radius:var(--radius);
+  font-size:13px;color:var(--bone-dim);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;
+  transition:all .15s;
+}
+.dash-nav button:hover{background:var(--panel2);color:var(--bone);}
+.dash-nav button.active{background:var(--rust);color:var(--asphalt);}
+.dash-panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:30px;}
+.dash-panel h3{font-family:var(--font-display);font-size:22px;margin-bottom:20px;}
+.kpi-row{display:flex;gap:16px;margin-bottom:28px;flex-wrap:wrap;}
+.kpi{flex:1;min-width:130px;background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:16px;}
+.kpi .num{font-family:var(--font-display);font-size:24px;color:var(--rust);}
+.kpi .lbl{font-size:12px;color:var(--bone-dim);text-transform:uppercase;letter-spacing:.5px;margin-top:4px;}
+.order-row{
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:14px 0;border-bottom:1px solid var(--line);flex-wrap:wrap;
+}
+.order-row:last-child{border-bottom:none;}
+.order-thumb{width:54px;height:54px;border-radius:var(--radius);overflow:hidden;background:#000;flex-shrink:0;}
+.order-thumb img{width:100%;height:100%;object-fit:cover;}
+.order-info{flex:1;min-width:140px;}
+.order-info .name{font-weight:600;font-size:14px;}
+.order-info .meta{font-size:12px;color:var(--bone-dim);}
+.status-pill{
+  font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:5px 11px;border-radius:20px;
+}
+.status-pill.confirmed{background:rgba(92,138,78,.2);color:#9fd98a;}
+.status-pill.transit{background:rgba(201,162,39,.2);color:var(--brass);}
+.empty-state{text-align:center;padding:50px 20px;color:var(--bone-dim);}
+.empty-state .big{font-family:var(--font-display);font-size:40px;color:var(--line);margin-bottom:10px;}
+
+/* listing form for sell */
+.listing-photo-preview{
+  width:100%;aspect-ratio:16/9;border:1px dashed var(--line);border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--asphalt);margin-top:8px;color:var(--bone-dim);font-size:13px;
+}
+.listing-photo-preview img{width:100%;height:100%;object-fit:cover;}
+
+/* ===================== CART DRAWER ===================== */
+.drawer-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:90;display:none;
+}
+.drawer-overlay.open{display:block;}
+.drawer{
+  position:fixed;top:0;right:0;height:100%;width:400px;max-width:92vw;
+  background:var(--panel);border-left:1px solid var(--line);z-index:91;
+  transform:translateX(100%);transition:transform .25s ease;
+  display:flex;flex-direction:column;
+}
+.drawer.open{transform:translateX(0);}
+.drawer-head{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;}
+.drawer-head h3{font-family:var(--font-display);font-size:18px;}
+.drawer-close{font-size:22px;color:var(--bone-dim);}
+.drawer-body{flex:1;overflow-y:auto;padding:18px 22px;}
+.cart-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);}
+.cart-item img{width:64px;height:64px;object-fit:cover;border-radius:var(--radius);}
+.cart-item-info{flex:1;}
+.cart-item-info .name{font-weight:600;font-size:14px;}
+.cart-item-info .price{color:var(--rust);font-weight:700;font-size:13px;margin-top:4px;}
+.qty-control{display:flex;align-items:center;gap:8px;margin-top:8px;}
+.qty-control button{width:24px;height:24px;border:1px solid var(--line);border-radius:var(--radius);font-size:14px;}
+.remove-link{font-size:11px;color:var(--bone-dim);text-decoration:underline;margin-top:6px;display:inline-block;}
+.drawer-foot{padding:20px 22px;border-top:1px solid var(--line);}
+.drawer-foot .total-row{display:flex;justify-content:space-between;margin-bottom:14px;font-family:var(--font-mech);font-weight:700;font-size:17px;}
+
+/* ===================== CHECKOUT ===================== */
+.checkout-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;}
+@media(max-width:800px){.checkout-grid{grid-template-columns:1fr;}}
+.summary-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:24px;height:fit-content;}
+.summary-line{display:flex;justify-content:space-between;font-size:14px;padding:8px 0;color:var(--bone-dim);}
+.summary-line.total{color:var(--bone);font-weight:700;font-size:18px;border-top:1px solid var(--line);margin-top:10px;padding-top:14px;font-family:var(--font-mech);}
+.pay-methods{display:flex;gap:10px;margin-bottom:20px;}
+.pay-method{
+  flex:1;border:1px solid var(--line);border-radius:var(--radius);padding:12px;text-align:center;
+  font-family:var(--font-mech);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--bone-dim);
+}
+.pay-method.active{border-color:var(--rust);color:var(--rust);background:rgba(217,83,30,.08);}
+.card-art{
+  background:linear-gradient(135deg, #2b2620, #1a1712);border:1px solid var(--line);border-radius:8px;
+  padding:20px;margin-bottom:20px;font-family:var(--font-mech);
+}
+.card-art .num{font-size:18px;letter-spacing:2px;margin:18px 0 14px;}
+.card-art .row{display:flex;justify-content:space-between;font-size:11px;color:var(--bone-dim);text-transform:uppercase;}
+
+.toast{
+  position:fixed;bottom:24px;right:24px;background:var(--panel);border:1px solid var(--brass);color:var(--bone);
+  padding:14px 20px;border-radius:var(--radius);font-size:14px;z-index:200;
+  display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.4);
+  animation:toastIn .25s ease;
+}
+@keyframes toastIn{from{transform:translateY(20px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+
+.center-note{text-align:center;color:var(--bone-dim);font-size:13px;margin-top:18px;}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition:none !important;animation:none !important;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="nav-wrap">
+    <div class="brand" onclick="goTo('home')" style="cursor:pointer;"><span class="dot">⛓</span> IRONHUB</div>
+    <nav class="links">
+      <a href="#" onclick="goTo('home')" data-view="home">Home</a>
+      <a href="#" onclick="goTo('shop')" data-view="shop">Shop</a>
+      <a href="#" onclick="goTo('sell')" data-view="sell">Sell a Bike</a>
+      <a href="#" onclick="goTo('dashboard')" data-view="dashboard">Dashboard</a>
+    </nav>
+    <div class="nav-right">
+      <button class="icon-btn" onclick="openCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+      <span id="authArea"></span>
+    </div>
+  </div>
+</header>
+<div class="tread"></div>
+
+<main>
+
+  <!-- ===================== HOME VIEW ===================== -->
+  <section class="view active" id="view-home">
+    <div class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Buy / Sell / Ride</div>
+          <h1>Real bikes.<br>Real riders.<br><span>Zero showroom games.</span></h1>
+          <p class="lead">IronHub connects everyday riders buying and selling road, mountain, electric and vintage bikes — no dealer markup, no fine print.</p>
+          <div class="hero-ctas">
+            <button class="btn-primary" onclick="goTo('shop')">Browse Bikes</button>
+            <button class="btn-ghost" onclick="goTo('sell')">List Your Bike</button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><div class="num">1,240+</div><div class="lbl">Bikes Sold</div></div>
+            <div class="stat"><div class="num">38</div><div class="lbl">Cities</div></div>
+            <div class="stat"><div class="num">4.8★</div><div class="lbl">Rider Rating</div></div>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <span class="tag-stamp">Listing #0182</span>
+          <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=900&q=80" alt="Mountain bike on trail">
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div><h2>Featured Listings</h2><p>Hand-picked bikes currently getting the most attention from riders.</p></div>
+        <button class="btn-ghost" onclick="goTo('shop')">View All →</button>
+      </div>
+      <div class="grid" id="featuredGrid"></div>
+    </div>
+
+    <div class="section" style="border-bottom:none;">
+      <div class="sell-banner">
+        <div>
+          <h3>Got a bike collecting dust?</h3>
+          <p>List it on IronHub in under two minutes. Add real photos, set your price, and reach riders actively looking to buy.</p>
+        </div>
+        <button class="btn-primary" onclick="goTo('sell')">Start Selling</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SHOP VIEW ===================== -->
+  <section class="view" id="view-shop">
+    <div class="section-head" style="margin-top:40px;">
+      <div><h2>All Bikes</h2><p>Filter by category to find the right ride.</p></div>
+    </div>
+    <div class="filter-bar" id="filterBar"></div>
+    <div class="grid" id="shopGrid"></div>
+  </section>
+
+  <!-- ===================== SELL VIEW ===================== -->
+  <section class="view" id="view-sell">
+    <div class="auth-wrap" style="max-width:560px;">
+      <div class="auth-card">
+        <h2>List Your Bike</h2>
+        <p class="sub">Paste a real photo link (e.g. copied from Chrome — right click an image → "Copy image address") and fill in the details below.</p>
+        <div class="form-msg" id="sellMsg"></div>
+        <form id="sellForm">
+          <div class="field">
+            <label>Bike Title</label>
+            <input type="text" id="sellTitle" placeholder="e.g. Trek Marlin 7 Mountain Bike" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label>Category</label>
+              <select id="sellCategory">
+                <option>Mountain</option>
+                <option>Road</option>
+                <option>Electric</option>
+                <option>Vintage</option>
+                <option>Kids</option>
+                <option>Yamaha</option>
+                <option>KTM</option>
+                <option>Honda</option>
+                <option>Bajaj</option>
+                <option>Royal Enfield</option>
+                <option>Triumph</option>
+                <option>Benelli</option>
+                <option>Ducati</option>
+                <option>Italian Bike</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Price (USD)</label>
+              <input type="number" id="sellPrice" placeholder="450" min="1" required>
+            </div>
+          </div>
+          <div class="field">
+            <label>Condition / Specs</label>
+            <input type="text" id="sellSpecs" placeholder="e.g. 21-speed, frame size M, used 1 year">
+          </div>
+          <div class="field">
+            <label>Image URL (paste link copied from Chrome)</label>
+            <input type="url" id="sellImage" placeholder="https://..." required oninput="previewListingImage()">
+            <div class="listing-photo-preview" id="listingPreview">Photo preview will appear here</div>
+          </div>
+          <button class="btn-primary btn-block" type="submit">Publish Listing</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LOGIN VIEW ===================== -->
+  <section class="view" id="view-login">
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <h2>Welcome back</h2>
+        <p class="sub">Log in to manage orders and listings.</p>
+        <div class="form-msg" id="loginMsg"></div>
+        <form id="loginForm">
+          <div class="field">
+            <label>Email</label>
+            <input type="email" id="loginEmail" required>
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" id="loginPassword" required>
+          </div>
+          <button class="btn-primary btn-block" type="submit">Log In</button>
+        </form>
+        <p class="auth-switch">New here? <a href="#" onclick="goTo('signup')">Create an account</a></p>
+        <p class="center-note">Demo tip: sign up first — accounts are stored locally in your browser.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SIGNUP VIEW ===================== -->
+  <section class="view" id="view-signup">
+    <div class="auth-wrap">
+      <div class="auth-card">
+        <h2>Create your account</h2>
+        <p class="sub">Join IronHub to buy or sell bikes.</p>
+        <div class="form-msg" id="signupMsg"></div>
+        <form id="signupForm">
+          <div class="field">
+            <label>Full Name</label>
+            <input type="text" id="signupName" required>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" id="signupEmail" required>
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" id="signupPassword" required minlength="4">
+          </div>
+          <button class="btn-primary btn-block" type="submit">Sign Up</button>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="#" onclick="goTo('login')">Log in</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DASHBOARD VIEW ===================== -->
+  <section class="view" id="view-dashboard">
+    <div class="dash-grid" style="margin-top:40px;">
+      <div class="dash-side">
+        <div class="dash-avatar" id="dashAvatar">?</div>
+        <h4 id="dashName">Guest</h4>
+        <div class="email" id="dashEmail">Not logged in</div>
+        <div class="dash-nav">
+          <button class="active" data-panel="overview" onclick="setDashPanel('overview')">Overview</button>
+          <button data-panel="orders" onclick="setDashPanel('orders')">My Orders</button>
+          <button data-panel="listings" onclick="setDashPanel('listings')">My Listings</button>
+          <button data-panel="profile" onclick="setDashPanel('profile')">Profile</button>
+        </div>
+      </div>
+      <div class="dash-panel" id="dashPanel"></div>
+    </div>
+  </section>
+
+  <!-- ===================== CHECKOUT VIEW ===================== -->
+  <section class="view" id="view-checkout">
+    <div class="section-head" style="margin-top:40px;">
+      <div><h2>Checkout</h2><p>Review your order and complete payment.</p></div>
+    </div>
+    <div class="checkout-grid">
+      <div>
+        <div class="summary-card" style="margin-bottom:20px;">
+          <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:14px;">Shipping Details</h3>
+          <div class="field-row">
+            <div class="field"><label>Full Name</label><input type="text" id="shipName" required></div>
+            <div class="field"><label>Phone</label><input type="text" id="shipPhone" required></div>
+          </div>
+          <div class="field"><label>Address</label><input type="text" id="shipAddress" required></div>
+          <div class="field-row">
+            <div class="field"><label>City</label><input type="text" id="shipCity" required></div>
+            <div class="field"><label>ZIP Code</label><input type="text" id="shipZip" required></div>
+          </div>
+        </div>
+
+        <div class="summary-card">
+          <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:14px;">Payment Method</h3>
+          <div class="pay-methods">
+            <button class="pay-method active" data-method="card" onclick="setPayMethod('card')">Card</button>
+            <button class="pay-method" data-method="upi" onclick="setPayMethod('upi')">UPI</button>
+            <button class="pay-method" data-method="cod" onclick="setPayMethod('cod')">Cash on Delivery</button>
+          </div>
+
+          <div id="payCardFields">
+            <div class="card-art">
+              <div class="row"><span>IRONHUB CARD</span><span>💳</span></div>
+              <div class="num" id="cardArtNum">•••• •••• •••• ••••</div>
+              <div class="row"><span id="cardArtName">CARD HOLDER</span><span id="cardArtExp">MM/YY</span></div>
+            </div>
+            <div class="field"><label>Card Number</label><input type="text" id="cardNumber" placeholder="4242 4242 4242 4242" maxlength="19" oninput="formatCardNumber(this)"></div>
+            <div class="field-row">
+              <div class="field"><label>Card Holder Name</label><input type="text" id="cardName" placeholder="Name on card"></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label>Expiry</label><input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5"></div>
+              <div class="field"><label>CVV</label><input type="password" id="cardCvv" placeholder="•••" maxlength="3"></div>
+            </div>
+          </div>
+          <div id="payUpiFields" style="display:none;">
+            <div class="field"><label>UPI ID</label><input type="text" id="upiId" placeholder="yourname@bank"></div>
+          </div>
+          <div id="payCodNote" style="display:none;color:var(--bone-dim);font-size:13px;padding:10px 0;">Pay in cash when your bike arrives. A small COD verification fee may apply.</div>
+
+          <div class="form-msg" id="checkoutMsg"></div>
+          <button class="btn-primary btn-block" onclick="placeOrder()" style="margin-top:10px;">Place Order & Pay</button>
+        </div>
+      </div>
+
+      <div class="summary-card">
+        <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:14px;">Order Summary</h3>
+        <div id="checkoutItems"></div>
+        <div class="summary-line"><span>Subtotal</span><span id="sumSubtotal">$0</span></div>
+        <div class="summary-line"><span>Shipping</span><span id="sumShipping">$25</span></div>
+        <div class="summary-line"><span>Tax (8%)</span><span id="sumTax">$0</span></div>
+        <div class="summary-line total"><span>Total</span><span id="sumTotal">$0</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ORDER SUCCESS VIEW ===================== -->
+  <section class="view" id="view-success">
+    <div class="auth-wrap" style="text-align:center;">
+      <div class="auth-card">
+        <div style="font-size:50px;margin-bottom:10px;">✅</div>
+        <h2>Order Confirmed!</h2>
+        <p class="sub" id="successText">Your bike is on its way.</p>
+        <button class="btn-primary btn-block" onclick="goTo('dashboard'); setDashPanel('orders');">View My Orders</button>
+        <button class="btn-ghost btn-block" style="margin-top:10px;" onclick="goTo('shop')">Continue Shopping</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="tread"></div>
+<footer>
+  <div class="footer-wrap">
+    <div><strong style="font-family:var(--font-display);color:var(--bone);">IRONHUB</strong> — built by riders, for riders.</div>
+    <div>© 2026 IronHub Demo. All bikes shown use real publicly linked photos.</div>
+  </div>
+</footer>
+
+<!-- ===================== CART DRAWER ===================== -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeCart()"></div>
+<div class="drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <h3>Your Cart</h3>
+    <button class="drawer-close" onclick="closeCart()">×</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+  <div class="drawer-foot">
+    <div class="total-row"><span>Total</span><span id="drawerTotal">$0</span></div>
+    <button class="btn-primary btn-block" onclick="goToCheckout()">Checkout</button>
+  </div>
+</div>
+
+<script>
+/* ===================================================================
+   DATA
+=================================================================== */
+const BIKES = [
+  {id:1, title:"Trek Marlin 7", category:"Mountain", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80"},
+  {id:2, title:"Cannondale CAAD13", category:"Road", price:1450, specs:"Carbon fork · 105 groupset · Size 54", img:"https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=700&q=80"},
+  {id:3, title:"RadPower RadCity", category:"Electric", price:1399, specs:"500W motor · 45mi range · Step-thru", img:"https://images.unsplash.com/photo-1622185135505-2d795003994a?w=700&q=80"},
+  {id:4, title:"Schwinn Cruiser Classic", category:"Vintage", price:320, specs:"Single speed · Steel frame · Restored", img:"https://images.unsplash.com/photo-1502744688674-c619d1586c9e?w=700&q=80"},
+  {id:5, title:"Giant Talon 29", category:"Mountain", price:690, specs:"29in wheels · Hydraulic brakes", img:"https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=700&q=80"},
+  {id:6, title:"Specialized Allez", category:"Road", price:980, specs:"Aluminum frame · Shimano Claris", img:"https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=700&q=80"},
+  {id:7, title:"Rad Mini Step-Thru", category:"Electric", price:1199, specs:"Foldable · 350W motor", img:"https://images.unsplash.com/photo-1571333250630-f0230c320b6d?w=700&q=80"},
+  {id:8, title:"Raleigh Retro Roadster", category:"Vintage", price:410, specs:"3-speed hub · Leather seat", img:"https://images.unsplash.com/photo-1573599852326-eaf4f9c5e337?w=700&q=80"},
+  {id:9, title:"Woom Kids Bike 14", category:"Kids", price:220, specs:"Ages 3-5 · Lightweight frame", img:"https://images.unsplash.com/photo-1605559911160-a3d95d213904?w=700&q=80"},
+  {id:10, title:"Trek Domane SL5", category:"Road", price:1890, specs:"Endurance geometry · Carbon", img:"https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80"},
+  {id:11, title:"Diamondback Atroz", category:"Mountain", price:560, specs:"Full suspension · 27.5in", img:"https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=700&q=80"},
+  {id:12, title:"Vintage Peugeot Road", category:"Vintage", price:275, specs:"Original 1978 frame · Restored gears", img:"https://images.unsplash.com/photo-1517649763962-0c623066013b?w=700&q=80"},
+
+  // Motorcycle brands
+  {id:13, title:"Yamaha R15 V4", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=700&q=80"},
+  {id:14, title:"Yamaha MT-15", category:"Yamaha", price:3950, specs:"Naked street · 155cc · LED lighting", img:"https://images.unsplash.com/photo-1622185135505-2d795003994a?w=700&q=80"},
+  {id:15, title:"KTM Duke 390", category:"KTM", price:5800, specs:"373cc single · TFT display · ABS", img:"https://images.unsplash.com/photo-1591637333472-4ef696c5a72d?w=700&q=80"},
+  {id:16, title:"KTM RC 390", category:"KTM", price:6100, specs:"Track-focused fairing · Slipper clutch", img:"https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?w=700&q=80"},
+  {id:17, title:"Honda CB350RS", category:"Honda", price:4500, specs:"348cc retro roadster · Disc brakes", img:"https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=700&q=80"},
+  {id:18, title:"Honda CBR650R", category:"Honda", price:9200, specs:"649cc inline-4 · Sport fairing", img:"https://images.unsplash.com/photo-1611241893603-3c359704e0ee?w=700&q=80"},
+  {id:19, title:"Bajaj Pulsar NS200", category:"Bajaj", price:2600, specs:"199cc · Perimeter frame · Sporty", img:"https://images.unsplash.com/photo-1580310614697-da7a6e0c34ed?w=700&q=80"},
+  {id:20, title:"Bajaj Dominar 400", category:"Bajaj", price:3800, specs:"373cc tourer · Twin-channel ABS", img:"https://images.unsplash.com/photo-1622185204369-9d0cd6f6f5a8?w=700&q=80"},
+  {id:21, title:"Royal Enfield Classic 350", category:"Royal Enfield", price:4300, specs:"349cc thump · Retro chrome styling", img:"https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=700&q=80"},
+  {id:22, title:"Royal Enfield Himalayan", category:"Royal Enfield", price:5200, specs:"411cc adventure tourer · Long travel suspension", img:"https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=700&q=80"},
+  {id:23, title:"Triumph Speed 400", category:"Triumph", price:5400, specs:"398cc single · Premium retro build", img:"https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?w=700&q=80"},
+  {id:24, title:"Triumph Street Triple", category:"Triumph", price:11500, specs:"765cc triple · Naked street performance", img:"https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=700&q=80"},
+  {id:25, title:"Benelli Leoncino 500", category:"Benelli", price:6700, specs:"500cc parallel-twin · Scrambler styling", img:"https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?w=700&q=80"},
+  {id:26, title:"Benelli TRK 502X", category:"Benelli", price:7300, specs:"Adventure tourer · Spoked wheels", img:"https://images.unsplash.com/photo-1591637333472-4ef696c5a72d?w=700&q=80"},
+  {id:27, title:"Ducati Monster 821", category:"Ducati", price:13800, specs:"L-twin engine · Italian naked icon", img:"https://images.unsplash.com/photo-1611241893603-3c359704e0ee?w=700&q=80"},
+  {id:28, title:"Ducati Panigale V2", category:"Ducati", price:18900, specs:"955cc superbike · Full race fairing", img:"https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=700&q=80"},
+  {id:29, title:"Moto Guzzi V7 Stone", category:"Italian Bike", price:9600, specs:"850cc transverse V-twin · Classic Italian heritage", img:"https://images.unsplash.com/photo-1580310614697-da7a6e0c34ed?w=700&q=80"},
+  {id:30, title:"Aprilia RS 457", category:"Italian Bike", price:8200, specs:"457cc parallel-twin · Sport fairing", img:"https://images.unsplash.com/photo-1622185204369-9d0cd6f6f5a8?w=700&q=80"},
+];
+
+const STORAGE_KEYS = { users:"ih_users", session:"ih_session", listings:"ih_listings", orders:"ih_orders", cart:"ih_cart" };
+
+/* ===================================================================
+   STORAGE HELPERS (simulated backend using localStorage)
+=================================================================== */
+function loadJSON(key, fallback){ try{ const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; }catch(e){ return fallback; } }
+function saveJSON(key, val){ localStorage.setItem(key, JSON.stringify(val)); }
+
+let users = loadJSON(STORAGE_KEYS.users, []);
+let listings = loadJSON(STORAGE_KEYS.listings, []);   // user-submitted bikes
+let orders = loadJSON(STORAGE_KEYS.orders, []);
+let cart = loadJSON(STORAGE_KEYS.cart, []);           // [{id, qty}]
+let currentUser = loadJSON(STORAGE_KEYS.session, null);
+
+function persistAll(){
+  saveJSON(STORAGE_KEYS.users, users);
+  saveJSON(STORAGE_KEYS.listings, listings);
+  saveJSON(STORAGE_KEYS.orders, orders);
+  saveJSON(STORAGE_KEYS.cart, cart);
+}
+
+function allBikes(){ return [...BIKES, ...listings]; }
+function findBike(id){ return allBikes().find(b => b.id === id); }
+
+/* ===================================================================
+   VIEW ROUTING
+=================================================================== */
+function goTo(viewName){
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + viewName).classList.add('active');
+  document.querySelectorAll('nav.links a').forEach(a => a.classList.toggle('active', a.dataset.view === viewName));
+  window.scrollTo({top:0, behavior:'smooth'});
+
+  if(viewName === 'shop') renderShop();
+  if(viewName === 'dashboard') renderDashboard();
+  if(viewName === 'checkout') renderCheckout();
+}
+
+/* ===================================================================
+   AUTH
+=================================================================== */
+function renderAuthArea(){
+  const el = document.getElementById('authArea');
+  if(currentUser){
+    el.innerHTML = `<button class="icon-btn" onclick="goTo('dashboard')">👤 ${escapeHTML(currentUser.name.split(' ')[0])}</button>
+                     <button class="btn-ghost" onclick="logout()" style="margin-left:10px;">Log Out</button>`;
+  } else {
+    el.innerHTML = `<button class="btn-ghost" onclick="goTo('login')">Log In</button>
+                     <button class="btn-primary" onclick="goTo('signup')" style="margin-left:10px;">Sign Up</button>`;
+  }
+}
+
+function showMsg(elId, text, type){
+  const el = document.getElementById(elId);
+  el.textContent = text;
+  el.className = 'form-msg ' + type;
+  el.style.display = 'block';
+}
+
+document.getElementById('signupForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('signupName').value.trim();
+  const email = document.getElementById('signupEmail').value.trim().toLowerCase();
+  const password = document.getElementById('signupPassword').value;
+
+  if(users.some(u => u.email === email)){
+    showMsg('signupMsg', 'An account with this email already exists.', 'error');
+    return;
+  }
+  const newUser = {id: 'u' + Date.now(), name, email, password};
+  users.push(newUser);
+  persistAll();
+  showMsg('signupMsg', 'Account created! Logging you in...', 'success');
+  setTimeout(()=>{
+    currentUser = {id:newUser.id, name:newUser.name, email:newUser.email};
+    saveJSON(STORAGE_KEYS.session, currentUser);
+    renderAuthArea();
+    goTo('dashboard');
+  }, 600);
+});
+
+document.getElementById('loginForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+  const password = document.getElementById('loginPassword').value;
+  const user = users.find(u => u.email === email && u.password === password);
+  if(!user){
+    showMsg('loginMsg', 'Incorrect email or password.', 'error');
+    return;
+  }
+  currentUser = {id:user.id, name:user.name, email:user.email};
+  saveJSON(STORAGE_KEYS.session, currentUser);
+  renderAuthArea();
+  showMsg('loginMsg', 'Welcome back, ' + user.name + '!', 'success');
+  setTimeout(()=> goTo('dashboard'), 400);
+});
+
+function logout(){
+  currentUser = null;
+  localStorage.removeItem(STORAGE_KEYS.session);
+  renderAuthArea();
+  goTo('home');
+  showToast('You have been logged out.');
+}
+
+function requireLogin(viewAfter){
+  if(!currentUser){
+    showToast('Please log in to continue.');
+    goTo('login');
+    return false;
+  }
+  return true;
+}
+
+/* ===================================================================
+   RENDER PRODUCTS
+=================================================================== */
+function bikeCardHTML(b){
+  return `
+  <div class="card">
+    <div class="card-photo">
+      <span class="card-badge">${escapeHTML(b.category)}</span>
+      <img src="${escapeAttr(b.img)}" alt="${escapeAttr(b.title)}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80'">
+    </div>
+    <div class="card-body">
+      <div class="card-cat">${escapeHTML(b.category)}</div>
+      <div class="card-title">${escapeHTML(b.title)}</div>
+      <div class="card-spec">${escapeHTML(b.specs||'')}</div>
+      <div class="card-foot">
+        <div class="card-price"><span class="cur">$</span>${b.price}</div>
+        <button class="add-btn" onclick="addToCart(${b.id})">Add to Cart</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderFeatured(){
+  const featured = allBikes().slice(0,6);
+  document.getElementById('featuredGrid').innerHTML = featured.map(bikeCardHTML).join('');
+}
+
+let activeFilter = 'All';
+function renderShop(){
+  const cats = ['All', ...new Set(allBikes().map(b=>b.category))];
+  document.getElementById('filterBar').innerHTML = cats.map(c =>
+    `<button class="chip ${c===activeFilter?'active':''}" onclick="setFilter('${c}')">${c}</button>`
+  ).join('');
+  const list = activeFilter==='All' ? allBikes() : allBikes().filter(b=>b.category===activeFilter);
+  document.getElementById('shopGrid').innerHTML = list.length ? list.map(bikeCardHTML).join('') : `<div class="empty-state"><div class="big">∅</div>No bikes in this category yet.</div>`;
+}
+function setFilter(cat){ activeFilter = cat; renderShop(); }
+
+/* ===================================================================
+   SELL / LISTING FORM
+=================================================================== */
+function previewListingImage(){
+  const url = document.getElementById('sellImage').value.trim();
+  const box = document.getElementById('listingPreview');
+  if(url){
+    box.innerHTML = `<img src="${escapeAttr(url)}" onerror="this.parentElement.innerHTML='⚠ Could not load image — check the link';">`;
+  } else {
+    box.innerHTML = 'Photo preview will appear here';
+  }
+}
+
+document.getElementById('sellForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  if(!requireLogin()) return;
+  const title = document.getElementById('sellTitle').value.trim();
+  const category = document.getElementById('sellCategory').value;
+  const price = parseFloat(document.getElementById('sellPrice').value);
+  const specs = document.getElementById('sellSpecs').value.trim();
+  const img = document.getElementById('sellImage').value.trim();
+
+  const listing = { id: Date.now(), title, category, price, specs, img, sellerId: currentUser.id, sellerName: currentUser.name };
+  listings.push(listing);
+  persistAll();
+  showMsg('sellMsg', 'Listing published! It now appears in the shop.', 'success');
+  this.reset();
+  document.getElementById('listingPreview').innerHTML = 'Photo preview will appear here';
+  setTimeout(()=> goTo('shop'), 700);
+});
+
+/* ===================================================================
+   CART
+=================================================================== */
+function addToCart(id){
+  const existing = cart.find(c => c.id === id);
+  if(existing) existing.qty += 1;
+  else cart.push({id, qty:1});
+  persistAll();
+  updateCartCount();
+  showToast('Added to cart 🚲');
+}
+function removeFromCart(id){
+  cart = cart.filter(c => c.id !== id);
+  persistAll();
+  renderDrawer();
+  updateCartCount();
+}
+function changeQty(id, delta){
+  const item = cart.find(c => c.id === id);
+  if(!item) return;
+  item.qty += delta;
+  if(item.qty <= 0) return removeFromCart(id);
+  persistAll();
+  renderDrawer();
+  updateCartCount();
+}
+function cartTotal(){
+  return cart.reduce((sum, c) => { const b = findBike(c.id); return sum + (b? b.price*c.qty : 0); }, 0);
+}
+function updateCartCount(){
+  document.getElementById('cartCount').textContent = cart.reduce((n,c)=>n+c.qty,0);
+}
+function openCart(){
+  renderDrawer();
+  document.getElementById('cartDrawer').classList.add('open');
+  document.getElementById('drawerOverlay').classList.add('open');
+}
+function closeCart(){
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.getElementById('drawerOverlay').classList.remove('open');
+}
+function renderDrawer(){
+  const body = document.getElementById('drawerBody');
+  if(cart.length === 0){
+    body.innerHTML = `<div class="empty-state"><div class="big">🛒</div>Your cart is empty.</div>`;
+  } else {
+    body.innerHTML = cart.map(c => {
+      const b = findBike(c.id);
+      if(!b) return '';
+      return `
+      <div class="cart-item">
+        <img src="${escapeAttr(b.img)}" alt="${escapeAttr(b.title)}">
+        <div class="cart-item-info">
+          <div class="name">${escapeHTML(b.title)}</div>
+          <div class="price">$${b.price}</div>
+          <div class="qty-control">
+            <button onclick="changeQty(${b.id},-1)">−</button>
+            <span>${c.qty}</span>
+            <button onclick="changeQty(${b.id},1)">+</button>
+          </div>
+          <a class="remove-link" onclick="removeFromCart(${b.id})">Remove</a>
+        </div>
+      </div>`;
+    }).join('');
+  }
+  document.getElementById('drawerTotal').textContent = '$' + cartTotal();
+}
+function goToCheckout(){
+  if(cart.length === 0){ showToast('Your cart is empty.'); return; }
+  closeCart();
+  if(!requireLogin()) return;
+  goTo('checkout');
+}
+
+/* ===================================================================
+   CHECKOUT / PAYMENT
+=================================================================== */
+let payMethod = 'card';
+function setPayMethod(m){
+  payMethod = m;
+  document.querySelectorAll('.pay-method').forEach(b => b.classList.toggle('active', b.dataset.method===m));
+  document.getElementById('payCardFields').style.display = m==='card' ? 'block':'none';
+  document.getElementById('payUpiFields').style.display = m==='upi' ? 'block':'none';
+  document.getElementById('payCodNote').style.display = m==='cod' ? 'block':'none';
+}
+function formatCardNumber(input){
+  let v = input.value.replace(/\D/g,'').slice(0,16);
+  let formatted = v.replace(/(.{4})/g,'$1 ').trim();
+  input.value = formatted;
+  document.getElementById('cardArtNum').textContent = formatted ? formatted.padEnd(19,'•') : '•••• •••• •••• ••••';
+}
+document.getElementById('cardName')?.addEventListener('input', function(){
+  document.getElementById('cardArtName').textContent = this.value.toUpperCase() || 'CARD HOLDER';
+});
+document.getElementById('cardExpiry')?.addEventListener('input', function(){
+  let v = this.value.replace(/\D/g,'').slice(0,4);
+  if(v.length>=3) v = v.slice(0,2)+'/'+v.slice(2);
+  this.value = v;
+  document.getElementById('cardArtExp').textContent = v || 'MM/YY';
+});
+
+function renderCheckout(){
+  const itemsEl = document.getElementById('checkoutItems');
+  itemsEl.innerHTML = cart.map(c => {
+    const b = findBike(c.id);
+    if(!b) return '';
+    return `<div class="summary-line"><span>${escapeHTML(b.title)} × ${c.qty}</span><span>$${b.price*c.qty}</span></div>`;
+  }).join('');
+  const subtotal = cartTotal();
+  const shipping = cart.length ? 25 : 0;
+  const tax = Math.round(subtotal * 0.08);
+  const total = subtotal + shipping + tax;
+  document.getElementById('sumSubtotal').textContent = '$'+subtotal;
+  document.getElementById('sumShipping').textContent = '$'+shipping;
+  document.getElementById('sumTax').textContent = '$'+tax;
+  document.getElementById('sumTotal').textContent = '$'+total;
+  if(currentUser){
+    document.getElementById('shipName').value = currentUser.name;
+  }
+}
+
+function placeOrder(){
+  if(cart.length === 0){ showToast('Your cart is empty.'); return; }
+  const name = document.getElementById('shipName').value.trim();
+  const phone = document.getElementById('shipPhone').value.trim();
+  const address = document.getElementById('shipAddress').value.trim();
+  const city = document.getElementById('shipCity').value.trim();
+  const zip = document.getElementById('shipZip').value.trim();
+
+  if(!name || !phone || !address || !city || !zip){
+    showMsg('checkoutMsg', 'Please fill in all shipping fields.', 'error');
+    return;
+  }
+  if(payMethod === 'card'){
+    const num = document.getElementById('cardNumber').value.replace(/\s/g,'');
+    const exp = document.getElementById('cardExpiry').value;
+    const cvv = document.getElementById('cardCvv').value;
+    if(num.length < 16 || exp.length < 5 || cvv.length < 3){
+      showMsg('checkoutMsg', 'Please enter valid card details.', 'error');
+      return;
+    }
+  }
+  if(payMethod === 'upi'){
+    const upi = document.getElementById('upiId').value.trim();
+    if(!upi.includes('@')){
+      showMsg('checkoutMsg', 'Please enter a valid UPI ID.', 'error');
+      return;
+    }
+  }
+
+  // simulate payment processing
+  showMsg('checkoutMsg', 'Processing payment...', 'success');
+  setTimeout(()=>{
+    const subtotal = cartTotal();
+    const order = {
+      id: 'ORD' + Date.now(),
+      userId: currentUser.id,
+      items: cart.map(c => { const b = findBike(c.id); return {id:c.id, title:b.title, img:b.img, price:b.price, qty:c.qty}; }),
+      total: subtotal + 25 + Math.round(subtotal*0.08),
+      method: payMethod,
+      shipping: {name, phone, address, city, zip},
+      status: 'Confirmed',
+      date: new Date().toISOString()
+    };
+    orders.push(order);
+    cart = [];
+    persistAll();
+    updateCartCount();
+    document.getElementById('successText').textContent = `Order ${order.id} confirmed. Total paid: $${order.total} via ${payMethod.toUpperCase()}.`;
+    goTo('success');
+  }, 900);
+}
+
+/* ===================================================================
+   DASHBOARD
+=================================================================== */
+let dashPanel = 'overview';
+function setDashPanel(p){
+  dashPanel = p;
+  document.querySelectorAll('.dash-nav button').forEach(b => b.classList.toggle('active', b.dataset.panel===p));
+  renderDashBody();
+}
+function renderDashboard(){
+  if(!requireLogin()) return;
+  document.getElementById('dashAvatar').textContent = currentUser.name.charAt(0).toUpperCase();
+  document.getElementById('dashName').textContent = currentUser.name;
+  document.getElementById('dashEmail').textContent = currentUser.email;
+  renderDashBody();
+}
+function myOrders(){ return orders.filter(o => o.userId === currentUser.id).sort((a,b)=> new Date(b.date)-new Date(a.date)); }
+function myListings(){ return listings.filter(l => l.sellerId === currentUser.id); }
+
+function renderDashBody(){
+  const panel = document.getElementById('dashPanel');
+  if(dashPanel === 'overview'){
+    const mo = myOrders(); const ml = myListings();
+    panel.innerHTML = `
+      <h3>Overview</h3>
+      <div class="kpi-row">
+        <div class="kpi"><div class="num">${mo.length}</div><div class="lbl">Orders Placed</div></div>
+        <div class="kpi"><div class="num">${ml.length}</div><div class="lbl">Bikes Listed</div></div>
+        <div class="kpi"><div class="num">$${mo.reduce((s,o)=>s+o.total,0)}</div><div class="lbl">Total Spent</div></div>
+      </div>
+      <h3 style="font-size:16px;">Recent Activity</h3>
+      ${mo.slice(0,3).map(orderRowHTML).join('') || '<div class="empty-state">No orders yet — go grab a bike!</div>'}
+    `;
+  } else if(dashPanel === 'orders'){
+    const mo = myOrders();
+    panel.innerHTML = `<h3>My Orders</h3>` + (mo.length ? mo.map(orderRowHTML).join('') : `<div class="empty-state"><div class="big">📦</div>No orders yet.</div>`);
+  } else if(dashPanel === 'listings'){
+    const ml = myListings();
+    panel.innerHTML = `<h3>My Listings</h3>` + (ml.length ? ml.map(l => `
+      <div class="order-row">
+        <div class="order-thumb"><img src="${escapeAttr(l.img)}" onerror="this.src='https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80'"></div>
+        <div class="order-info"><div class="name">${escapeHTML(l.title)}</div><div class="meta">${escapeHTML(l.category)} · $${l.price}</div></div>
+        <button class="btn-ghost" onclick="deleteListing(${l.id})">Remove</button>
+      </div>
+    `).join('') : `<div class="empty-state"><div class="big">🚲</div>You haven't listed any bikes yet.<br><br><button class="btn-primary" onclick="goTo('sell')">List a Bike</button></div>`);
+  } else if(dashPanel === 'profile'){
+    panel.innerHTML = `
+      <h3>Profile</h3>
+      <div class="field"><label>Name</label><input type="text" value="${escapeAttr(currentUser.name)}" disabled></div>
+      <div class="field"><label>Email</label><input type="text" value="${escapeAttr(currentUser.email)}" disabled></div>
+      <p class="center-note" style="text-align:left;">This is a front-end demo account stored in your browser only.</p>
+    `;
+  }
+}
+function orderRowHTML(o){
+  const first = o.items[0];
+  return `
+  <div class="order-row">
+    <div class="order-thumb"><img src="${escapeAttr(first.img)}" onerror="this.src='https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80'"></div>
+    <div class="order-info">
+      <div class="name">${escapeHTML(first.title)}${o.items.length>1 ? ' + '+(o.items.length-1)+' more' : ''}</div>
+      <div class="meta">${o.id} · ${new Date(o.date).toLocaleDateString()} · $${o.total}</div>
+    </div>
+    <span class="status-pill confirmed">${o.status}</span>
+  </div>`;
+}
+function deleteListing(id){
+  listings = listings.filter(l => l.id !== id);
+  persistAll();
+  renderDashBody();
+  showToast('Listing removed.');
+}
+
+/* ===================================================================
+   UTIL
+=================================================================== */
+function escapeHTML(str){ return String(str).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+function escapeAttr(str){ return escapeHTML(str); }
+
+let toastTimer;
+function showToast(msg){
+  clearTimeout(toastTimer);
+  let t = document.getElementById('toastEl');
+  if(t) t.remove();
+  t = document.createElement('div');
+  t.id = 'toastEl';
+  t.className = 'toast';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  toastTimer = setTimeout(()=> t.remove(), 2400);
+}
+
+/* ===================================================================
+   INIT
+=================================================================== */
+renderAuthArea();
+renderFeatured();
+updateCartCount();
+goTo('home');
+
+</script>
+</body>
+</html>

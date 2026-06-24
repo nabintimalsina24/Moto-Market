@@ -2,44 +2,167 @@
    DATA
 =================================================================== */
 const BIKES = [
+
+  //----- Scooter-----//
+
   {id:1, title:"Trek Marlin 7", category:"Scooter", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80"},
+
+
+//----Cycle----//
 
 
   {id:2, title:"Cannondale CAAD13", category:"Cycle", price:1450, specs:"Carbon fork · 105 groupset · Size 54", img:"https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=700&q=80"},
 
 
-  {id:3, title:"RadPower RadCity", category:"Electric Bikes", price:1399, specs:"500W motor · 45mi range · Step-thru", img:"https://images.unsplash.com/photo-1622185135505-2d795003994a?w=700&q=80"},
 
 
-  {id:4, title:"Schwinn Cruiser Classic", category:"Vintage", price:320, specs:"Single speed · Steel frame · Restored", img:"https://images.unsplash.com/photo-1502744688674-c619d1586c9e?w=700&q=80"},
 
 
-  {id:5, title:"Giant Talon 29", category:"Cycle", price:690, specs:"29in wheels · Hydraulic brakes", img:"https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=700&q=80"},
 
   
 
-  {id:6, title:"Specialized Allez", category:"CrossFire", price:980, specs:"Aluminum frame · Shimano Claris", img:"https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=700&q=80"},
 
+  
+  
+        /*---- CrossFire Bikes ----*/
+
+  {id:6, title:"Crossfire XR 250 — 250cc", category:"CrossFire", price:980, specs:"Aluminum frame · Shimano Claris", img:"https://images.openai.com/static-rsc-4/mtNP6a8QVn6ystJgnqpobdfIGxarlYfq8wwZt8VjZzjVrwRMPjZFMtkV9Pqr1RAOGJp1_8YcDumpnXSN_IcTLaFyxGT0EjTKWW1GkyymRZpO6BCVB7WT85gmy5oF20ip2jKwpKiXji2ngXR1b48eSAvB4bxc_UDPrPtend3mjLBjsf4iVB2TKqG10KVCACeg?purpose=fullsize"},
+
+
+
+
+{id:6, title:"Crossfire GR7 — 250cc–300cc", category:"CrossFire", price:980, specs:"Aluminum frame · Shimano Claris", img:"https://images.openai.com/static-rsc-4/uie9RElpKTiGU3Kba4jz6vr8XI46aLSRPbN4YRIwSQak3tT-Q4NDkznaQ7ysHRb7aLl5NcaGWNK3sSnX48W7I7xIWnJTOlQT1ruW53ymI1wgQcLG09PwtN3RszcfVvo2nd1ehn-jnrr9cIQjHK-7CO8W2uFq1e6E07JkCO-ZG9Ocu1j8hRbqN6E-0AP71I57?purpose=fullsize"},
+
+
+
+
+{id:6, title:"Crossfire RM 250 — 250cc", category:"CrossFire", price:980, specs:"Aluminum frame · Shimano Claris", img:"https://images.openai.com/static-rsc-4/WO685DIsH8kQEp0VeqxwhnGIET9EgcyHpdvv6zhwm18I13eCwUb5UOumbjZ5pvmBcY8u8X3Ul3R2V631QJZGF2aBxw6FBL1o0Zi2qV6MEgHkLUc-1H1O8FiGhfFoSDomx1rLSryyUSZXN2uk5bJ1xRfJ3V-1mGtFu6ZrUiGGhH2JXPcn2R_RsRk4kX422_AP?purpose=fullsize"},
+
+
+
+{id:6, title:"Crossfire CX 250", category:"CrossFire", price:980, specs:"Aluminum frame · Shimano Claris", img:"https://images.openai.com/static-rsc-4/alFMDLjedkhhhK7WzoniAJ4jcMDu5mVaY_gm59A11b6dKXl6ofuD_N-kwSZ8c0ydnANUjDIyIaYOt5TaoQOigYlUGGgWp25MD9dC_Thg75Y4lhqHWRHbNRo8FhS12nVq1jkLFfut719raf2lLEWcirExKf6hj1LT8sFg990OHGncT7P39EzDqAGfLeREJL4B?purpose=fullsize"},
+
+
+
+{id:6, title:"Crossfire Tracker 250 — 250cc", category:"CrossFire", price:980, specs:"Aluminum frame · Shimano Claris", img:"https://images.openai.com/static-rsc-4/oJ2qApv1aGVdceefnYOQdFlq9ySsVAnjyarfZ9Zs4lpqMplya4GPxVeqeSTR1rs40Mg1R0Lzss-eWXkWxvyh0VrJsWHOINXJRkk0jopsuICgULEQj4ZNtiTbAXIBtYbNCh9iOO-mAVXRTYtlMkF54E5HXdwPl4yVjuUng7Hy1lBg85Kzr8hkvFewE5vHGkoJ?purpose=fullsize"},
+
+
+
+
+
+/*---- Electric Bikes ----*/
 
   {id:7, title:"Rad Mini Step-Thru", category:"Electric Bike & Scooters", price:1199, specs:"Foldable · 350W motor", img:"https://images.unsplash.com/photo-1571333250630-f0230c320b6d?w=700&q=80"},
 
-  {id:8, title:"Raleigh Retro Roadster", category:"Vintage", price:410, specs:"3-speed hub · Leather seat", img:"https://images.unsplash.com/photo-1573599852326-eaf4f9c5e337?w=700&q=80"},
+
+
+
+
+/*---- Vintage Bikes ----*/
+
+{id:4, title:"Schwinn Cruiser Classic", category:"Vintage", price:320, specs:"Single speed · Steel frame · Restored", img:"https://images.unsplash.com/photo-1502744688674-c619d1586c9e?w=700&q=80"},
+
+
+{id:8, title:"YAMAHA RX100", category:"Vintage", price:410, specs:"100cc", img:"https://wallpapercave.com/wp/wp4544374.jpg"},
+
+{id:8, title:"Royal Enfield", category:"Vintage", price:410, specs:"350cc", img:"https://i.pinimg.com/736x/86/7f/a2/867fa2a5733209f22e63b6ec43e39ff8.jpg"},
+
+
+{id:8, title:"Triumph", category:"Vintage", price:410, specs:"350cc", img:"https://p0.piqsels.com/preview/295/818/497/4k-wallpaper-asphalt-bike-cafe-racer.jpg"},
+
+/*---- Harley-Davidson Bikes ----*/
+
+
+{id:8, title:"Harley-Davidson Nightster — 975ccr", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://cdn-s3.autocarindia.com/harley-davidson/nightster/2025-nightster-gallery-1.jpg?w=640"},
  
-{id:8, title:"Raleigh Retro Roadster", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://images.unsplash.com/photo-1573599852326-eaf4f9c5e337?w=700&q=80"},
- 
+
+
+{id:8, title:"Harley-Davidson Sportster S — 1252ccr", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://i.pinimg.com/736x/ec/90/5a/ec905affe1ab68fd111adea02d4cf564.jpg"},
+
+
+{id:8, title:"Harley-Davidson Fat Boy — 1923cc", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://preview.free3d.com/img/2018/06/2408208613186209667/91tosonj.jpg"},
+
+
+
+
+{id:8, title:"Harley-Davidson Breakout — 1923cc", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://w0.peakpx.com/wallpaper/677/907/HD-wallpaper-harley-davidson-softail-breakout-chopper-cool-motorcycle-american-motorcycles-harley-davidson.jpg"},
+
+
+
+
+{id:8, title:"Harley-Davidson Low Rider S — 1923cc", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://images.openai.com/static-rsc-4/_AGLHCbGm80MS4paw864uWQf7ZEFohOQteZV4Q0ZsPbBm4bCKLXwMzikuM9s7rIc4NQHlKRTHAjuL01PTEsrJfOFx9mMPrEYjBdxH1se8UiB3KlTBP472o-vlxw-I5qsUfM0UZMvf_Mtz5qDR00jB2aUtV9t0MLdxh7_441OCUZMsD3l2mqs5P7n4MlzsjlP?purpose=fullsize"},
+
+
+
+
+
+{id:8, title:"Harley-Davidson Street Glide — 1923cc", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://w0.peakpx.com/wallpaper/927/741/HD-wallpaper-2012-harley-davidson-street-glide-custom-bagger-bike-2012-chrome.jpg"},
+
+
+
+{id:8, title:"Harley-Davidson Road Glide — 1923ccr", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://images.openai.com/static-rsc-4/rXjuHMmtjBTI1sBxEeP0PYEN0zFfUmmy9KfmuZ9tM-3pVO6qpcdSSde_UG90eOk-YR0Gqqd5K_EcLI60ejqk-ayqcpcZTRKnkxB_b8RymvLmsZJWUISCHYw15OznycD-0CcbPv4OYwMFHCis6CX5RPKZ1w1-2ilQKnWMnzSHg5kY3je691uAp8wewaW-eO45?purpose=fullsize"},
+
+
+{id:8, title:"Harley-Davidson Ultra Limited — 1923cc", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://w0.peakpx.com/wallpaper/503/1023/HD-wallpaper-motorcycle-bike-harley-davidson-vehicles-harley-davidson-electra-glide-ultra-classic.jpg"},
+
+
+{id:8, title:"Harley-Davidson Pan America 1250 — 1252cc", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://cdn-s3.autocarindia.com/harley-davidson/pan-america/2026-pan-america-st-beauty-ls-1.jpg"},
+
+{id:8, title:"Harley-Davidson Freewheeler", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://cdn.motor1.com/images/mgl/OYJel/s1/harley-davidson-trike.jpg"},
+
+
+{id:8, title:"Harley-Davidson Tri Glide Ultra", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://i.pinimg.com/736x/bd/48/14/bd4814346b134b0dc6f03d2fe0c26f38.jpg"},
+
+
+
+
+
+
+
+
+
+
+/*---- BMW Bikes ----*/
 
   {id:10, title:"Trek Domane SL5", category:"BMW", price:1890, specs:"Endurance geometry · Carbon", img:"https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80"},
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*---- Kawasaki Bikes ----*/
+
   {id:11, title:"Diamondback Atroz", category:"Kawasaki", price:560, specs:"Full suspension · 27.5in", img:"https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=700&q=80"},
 
+
+
+
+  /*---- Suzuki Bikes ----*/
 
   {id:12, title:"Vintage Peugeot Road", category:"Suzuki", price:275, specs:"Original 1978 frame · Restored gears", img:"https://images.unsplash.com/photo-1517649763962-0c623066013b?w=700&q=80"},
 
 
 
 
-  // Motorcycle brands
+  //---- Yamaha Bikes ----//
+
   {id:13, title:"Yamaha R15 V4", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://i.pinimg.com/736x/3a/51/eb/3a51ebc1c374b913e7dc18b43c4f4a4e.jpg"},
 
 
@@ -137,11 +260,17 @@ const BIKES = [
    {id:14, title:"Yamaha RX100", category:"Yamaha", price:1250, specs:"RX KING .100cc", img:"https://images.openai.com/static-rsc-4/mUid5S5xK2KEo904-IUO5EeZjujBHwdMGSibep3hj2SBzb90yABvsGJrYBT23WWZ4k5nBbFvHug6_t1TkRsiIOV8pmrJnXQvBoUwitjEv20JsjbL466qYQ5Z1_HS50YyFQLatSZwdgWPOcUXYYEpJ8ZXx_hkDvLfuIYeZkKdByTP4OTpM0ArWbKZbhoqrlZF?purpose=fullsize"},
   
 
+
+   //---- KTM Bikes ----//
+
+
   {id:15, title:"KTM Duke 390", category:"KTM", price:5800, specs:"373cc single · TFT display · ABS", img:"https://images.unsplash.com/photo-1608975213589-14e7f23aeab7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHVrZSUyMDM5MHxlbnwwfHwwfHx8MA%3D%3D"},
   
   {id:16, title:"KTM 1390 Super Duke R", category:"KTM", price:12000, specs:"190 HP.V-Twin", img:"https://i.pinimg.com/1200x/af/f1/62/aff162e5c6474dea2f8c1fe3ba04887c.jpg"},
 
 {id:16, title:"KTM RC 390", category:"KTM", price:6100, specs:"Track-focused fairing · Slipper clutch", img:"https://i.pinimg.com/736x/91/bf/19/91bf193473f61501b1557ed2d0794c75.jpg"},
+
+/*---- Honda Bikes ----*/
 
   {id:17, title:"Honda CBR1000RR-R Fireblade", category:"Honda", price:28999, specs:"999cc MotoGP-inspired Aerodynamics", img:"https://4kwallpapers.com/images/walls/thumbs_2t/6942.jpg"},
 
@@ -152,6 +281,62 @@ const BIKES = [
 {id:18, title:"Honda Gold Wing", category:"Honda", price:25000, specs:"1833cc 6-cylinder engine", img:"https://www.motorcyclecruiser.com/resizer/nrk2Ft6YVRf-H3oYZNs2zRAup5A=/1000x750/filters:focal(45x45:55x55)/cloudfront-us-east-1.images.arcpublishing.com/octane/HMWD4LG2476JUDJP3HHHSTHQQQ.jpg"},
 
 
+
+
+
+{id:18, title:"Honda CRF110F", category:"Honda", price:9200, specs:"110cc single-cylinder · Trail-ready", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+{id:18, title:"Honda CRF125F", category:"Honda", price:9200, specs:"125cc single-cylinder · Trail-ready ", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+{id:18, title:"Honda CRF150R", category:"Honda", price:9200, specs:"150cc single-cylinder · Trail-ready", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda CRF250R", category:"Honda", price:9200, specs:"250cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda CRF250RX", category:"Honda", price:9200, specs:"250cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda CRF250RX", category:"Honda", price:9200, specs:"250cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda CRF450R", category:"Honda", price:9200, specs:"450cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda CRF450RX", category:"Honda", price:9200, specs:"450cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+
+{id:18, title:"Honda CRF450RWE", category:"Honda", price:9200, specs:"450cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+
+{id:18, title:"Honda CRF300L", category:"Honda", price:9200, specs:"3 00cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda CRF300 Rally", category:"Honda", price:9200, specs:"300cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+{id:18, title:"Honda XR150L", category:"Honda", price:9200, specs:"150cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //Bajaj Bikes
+
   {id:19, title:" Pulsar NS200", category:"Bajaj", price:2600, specs:"199cc · Perimeter frame · Sporty", img:"https://i.pinimg.com/736x/9f/36/cb/9f36cb4aa352a082dfa16d8b82ed499e.jpg"},
 
 
@@ -161,6 +346,9 @@ const BIKES = [
 
 {id:19, title:" Pulsar 150", category:"Bajaj", price:2600, specs:"150cc", img:"https://w0.peakpx.com/wallpaper/62/192/HD-wallpaper-pulsar-150-bajaj-pulsar-150-motorcycle.jpg"},
 
+
+
+/*---- Royal Enfield Bikes ----*/
 
   {id:21, title:"Royal Enfield Classic 350", category:"Royal Enfield", price:4300, specs:"349cc thump · Retro styling", img:"https://images.unsplash.com/photo-1622185135505-2d795003994a?w=700&q=80"},
 
@@ -174,6 +362,8 @@ const BIKES = [
   
   {id:22, title:"Royal Enfield Hunter 350", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://imgcdn.zigwheels.my/large/gallery/exterior/89/1881/royal-enfield-hunter-350-right-side-viewfull-image-390792.jpg"},
 
+
+  /*---- Triumph Bikes ----*/
 
   {id:23, title:"Triumph Speed 400", category:"Triumph", price:5400, specs:"398cc single · Premium retro build", img:"https://d2lkn59rua3ry2.cloudfront.net/wp-content/uploads/2026/03/Triumph-Motorcycles-2.jpg"},
 
@@ -195,6 +385,8 @@ const BIKES = [
  {id:24, title:"Triumph Street Triple 765", category:"Triumph", price:11500, specs:"765cc triple · Naked street performance", img:"https://mir-s3-cdn-cf.behance.net/projects/404/fd77bc227089759.Y3JvcCw1MTEzLDQwMDAsNDQzLDA.jpg"},
 
 
+
+ /*---- Benelli Bikes ----*/
 
   {id:25, title:"Benelli Leoncino 500", category:"Benelli", price:6700, specs:"500cc parallel-twin · Scrambler styling", img:"https://c.ndtvimg.com/2019-08/gch0vbr_benelli-leoncino-500-_625x300_05_August_19.jpg"},
 
@@ -234,7 +426,7 @@ const BIKES = [
   {id:26, title:"Benelli TRK 502X", category:"Benelli", price:7300, specs:"Adventure tourer · Spoked wheels", img:"https://images.openai.com/static-rsc-4/cMlxb2EYX0wBHyHK6MvJUICfVrk9-3NKyFwH-5OyyP7utRtl8WijwX9Gx5d00TTbbB1b1_kLMNFJllaIn3NQRTxk8r4krVjYQ0ZNiW2yNAokJpA8RdKfLE8vG0nklxo9zJg4ibeKI5gBn7up5uXmQVmw6T3M-IVIBnhTYKGmtO_l1mY8RiBk0wqnRWTYeJ7l?purpose=fullsize"},
 
 
-
+/*---- Ducati Bikes ----*/
 
   {id:27, title:"Ducati Monster 821", category:"Ducati", price:13800, specs:"L-twin engine · Italian naked icon", img:"https://images.openai.com/static-rsc-4/3cQah3Q3B23qhkgeYmGA7CLhwcmR_O15PJRACMx1NxxsENDepp9vgUrErxxYUcvjNsul88x1akHOmOvLKoNVNXDYxb_pd4F7LR1TCe9UnQFKyytLx7ToxU_K8d79E9UJZgsJBJ6DjcuHwuckvSb8mW-BBIHRQbkWEOXDl_gp19weMWbYafp-OdCeHuBgCjXi?purpose=fullsize"},
 
@@ -303,6 +495,7 @@ const BIKES = [
 
 
 
+/*---- CFMOTO Bikes ----*/
 
   {id:29, title:"CFMOTO 150NK — 150cc", category:"CFMOTO", price:9600, specs:"150cc ", img:"https://images.openai.com/static-rsc-4/vYUPOaWBi4Yzlh6MT_heBlfEhX3f5sOnIV9QMRKS3L1ZYG_SeinbkN3iKkShBtxWk2J0EOCsKvoAYh_pyEm4gKms1a8s-GwFU3XGgGJjCIUEFSumI5EMJTKYSP_YQHspMxdTCYPRnJ7tR5Y5pmLlUzO1TxdPNvoDHpXx8Bay4ALC66yNLxLFx9o_s1Ce7Wof?purpose=fullsize"},
 
@@ -329,7 +522,7 @@ const BIKES = [
 {id:29, title:"CFMOTO 800NK — 799cc", category:"CFMOTO", price:9600, specs:"799cc ", img:"https://media.vxt.production.ldv-svcs.live/assets/cfmoto/images/2024_models/color-swap/24-mcy-800nk-hero-black-swap.jpg"},
 
 
-{id:29, title:"CX 250cc", category:"CFMOTO", price:9600, specs:"250cc ", img:"https://hamrobazaar.blr1.cdn.digitaloceanspaces.com/User/Posts/2026/04/17/f40a866f-fe09-b166-aeb4-bdc402b97005.jpeg"},
+
 
 
 

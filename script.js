@@ -2,18 +2,42 @@
    DATA
 =================================================================== */
 const BIKES = [
-  {id:1, title:"Trek Marlin 7", category:"Mountain", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80"},
-  {id:2, title:"Cannondale CAAD13", category:"Road", price:1450, specs:"Carbon fork · 105 groupset · Size 54", img:"https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=700&q=80"},
-  {id:3, title:"RadPower RadCity", category:"Electric", price:1399, specs:"500W motor · 45mi range · Step-thru", img:"https://images.unsplash.com/photo-1622185135505-2d795003994a?w=700&q=80"},
+  {id:1, title:"Trek Marlin 7", category:"Scooter", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80"},
+
+
+  {id:2, title:"Cannondale CAAD13", category:"Cycle", price:1450, specs:"Carbon fork · 105 groupset · Size 54", img:"https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=700&q=80"},
+
+
+  {id:3, title:"RadPower RadCity", category:"Electric Bikes", price:1399, specs:"500W motor · 45mi range · Step-thru", img:"https://images.unsplash.com/photo-1622185135505-2d795003994a?w=700&q=80"},
+
+
   {id:4, title:"Schwinn Cruiser Classic", category:"Vintage", price:320, specs:"Single speed · Steel frame · Restored", img:"https://images.unsplash.com/photo-1502744688674-c619d1586c9e?w=700&q=80"},
-  {id:5, title:"Giant Talon 29", category:"Mountain", price:690, specs:"29in wheels · Hydraulic brakes", img:"https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=700&q=80"},
-  {id:6, title:"Specialized Allez", category:"Road", price:980, specs:"Aluminum frame · Shimano Claris", img:"https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=700&q=80"},
-  {id:7, title:"Rad Mini Step-Thru", category:"Electric", price:1199, specs:"Foldable · 350W motor", img:"https://images.unsplash.com/photo-1571333250630-f0230c320b6d?w=700&q=80"},
+
+
+  {id:5, title:"Giant Talon 29", category:"Cycle", price:690, specs:"29in wheels · Hydraulic brakes", img:"https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=700&q=80"},
+
+  
+
+  {id:6, title:"Specialized Allez", category:"CrossFire", price:980, specs:"Aluminum frame · Shimano Claris", img:"https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=700&q=80"},
+
+
+  {id:7, title:"Rad Mini Step-Thru", category:"Electric Bike & Scooters", price:1199, specs:"Foldable · 350W motor", img:"https://images.unsplash.com/photo-1571333250630-f0230c320b6d?w=700&q=80"},
+
   {id:8, title:"Raleigh Retro Roadster", category:"Vintage", price:410, specs:"3-speed hub · Leather seat", img:"https://images.unsplash.com/photo-1573599852326-eaf4f9c5e337?w=700&q=80"},
-  {id:9, title:"Woom Kids Bike 14", category:"Kids", price:220, specs:"Ages 3-5 · Lightweight frame", img:"https://images.unsplash.com/photo-1605559911160-a3d95d213904?w=700&q=80"},
-  {id:10, title:"Trek Domane SL5", category:"Road", price:1890, specs:"Endurance geometry · Carbon", img:"https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80"},
-  {id:11, title:"Diamondback Atroz", category:"Mountain", price:560, specs:"Full suspension · 27.5in", img:"https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=700&q=80"},
-  {id:12, title:"Vintage Peugeot Road", category:"Vintage", price:275, specs:"Original 1978 frame · Restored gears", img:"https://images.unsplash.com/photo-1517649763962-0c623066013b?w=700&q=80"},
+ 
+{id:8, title:"Raleigh Retro Roadster", category:"Harley-Davidson", price:410, specs:"3-speed hub · Leather seat", img:"https://images.unsplash.com/photo-1573599852326-eaf4f9c5e337?w=700&q=80"},
+ 
+
+  {id:10, title:"Trek Domane SL5", category:"BMW", price:1890, specs:"Endurance geometry · Carbon", img:"https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80"},
+
+
+  {id:11, title:"Diamondback Atroz", category:"Kawasaki", price:560, specs:"Full suspension · 27.5in", img:"https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?w=700&q=80"},
+
+
+  {id:12, title:"Vintage Peugeot Road", category:"Suzuki", price:275, specs:"Original 1978 frame · Restored gears", img:"https://images.unsplash.com/photo-1517649763962-0c623066013b?w=700&q=80"},
+
+
+
 
   // Motorcycle brands
   {id:13, title:"Yamaha R15 V4", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://i.pinimg.com/736x/3a/51/eb/3a51ebc1c374b913e7dc18b43c4f4a4e.jpg"},
@@ -138,14 +162,14 @@ const BIKES = [
 {id:19, title:" Pulsar 150", category:"Bajaj", price:2600, specs:"150cc", img:"https://w0.peakpx.com/wallpaper/62/192/HD-wallpaper-pulsar-150-bajaj-pulsar-150-motorcycle.jpg"},
 
 
-  {id:21, title:"Royal Enfield Classic 350", category:"Royal Enfield", price:4300, specs:"349cc thump · Retro styling", img:"https://i.pinimg.com/750x/8e/f7/ec/8ef7ec13cb860659c36e54a2208da5e3.jpg"},
+  {id:21, title:"Royal Enfield Classic 350", category:"Royal Enfield", price:4300, specs:"349cc thump · Retro styling", img:"https://images.unsplash.com/photo-1622185135505-2d795003994a?w=700&q=80"},
 
    {id:21, title:"Royal Enfield Super Meteor 650", category:"Royal Enfield", price:4300, specs:"650cc thump · Retro styling", img:"https://wallpaperaccess.com/full/23189321.jpg"},
 
  {id:21, title:"Royal Enfield Bear 650", category:"Royal Enfield", price:4400, specs:"650cc thump · Retro styling", img:"https://external-preview.redd.it/wonder-why-royal-enfield-is-calling-its-latest-the-bear-650-v0-c-s9JsPCOlY7A7Igq2tvltpkGxje83z0SkgExf-xYIM.jpg?auto=webp&s=d74e535c6756e1746c5f3535c26f96a3d0bfff94"},
 
 
-  {id:21, title:"Royal Enfield Himalayan 450", category:"Royal Enfield", price:4500, specs:"450cc thump · Retro  styling", img:"https://i.pinimg.com/1200x/20/c4/a9/20c4a9e2a5f30365873f4e7840188ef4.jpg"},
+  {id:21, title:"Royal Enfield Himalayan 450", category:"Royal Enfield", price:4500, specs:"450cc thump · Retro  styling", img:"https://static0.hotcarsimages.com/wordpress/wp-content/uploads/2024/05/2024-royal-enfield-himalayan-450-official-teaser-1.jpeg?w=1600&h=900&fit=crop"},
 
   
   {id:22, title:"Royal Enfield Hunter 350", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://imgcdn.zigwheels.my/large/gallery/exterior/89/1881/royal-enfield-hunter-350-right-side-viewfull-image-390792.jpg"},

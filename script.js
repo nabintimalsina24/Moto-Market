@@ -17,7 +17,46 @@ const BIKES = [
 
   // Motorcycle brands
   {id:13, title:"Yamaha R15 V4", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://i.pinimg.com/736x/3a/51/eb/3a51ebc1c374b913e7dc18b43c4f4a4e.jpg"},
+
+
   {id:14, title:"Yamaha MT-15", category:"Yamaha", price:3950, specs:"Naked street · 155cc · LED lighting", img:"https://iamabiker.com/wp-content/uploads/2022/07/Yamaha-MT-15-V2-HD-wallpaper-1-1536x864.jpg"},
+
+
+
+
+{id:14, title:"Yamaha YZF-R1 — 998cc", category:"Yamaha", price:3950, specs:"Naked street · 998cc · LED lighting", img:"https://images4.alphacoders.com/128/thumb-1920-1280019.jpg"},
+
+
+
+{id:14, title:"Yamaha R9 — 890cc", category:"Yamaha", price:3950, specs:"Naked street · 890cc · LED lighting", img:"https://roaddirt.tv/wp-content/uploads/2025/03/2025_Yamaha_R9_PIR-Statics_IntensityWhite_Redline-JosephAgustinPhoto-DSC07222.jpg"},
+
+
+  
+{id:14, title:"Yamaha R3 — 321cc", category:"Yamaha", price:3950, specs:"Naked street · 321cc · LED lighting", img:"https://images.openai.com/static-rsc-4/BlMHbII32Mc_GViw7Fzl-q3uudhEFqD6hWpxSBEONNJjXGa0y-DVKAK29e_n11ZCdXam__irb8nYrT5B_HPJSUxoSmvvsVMOms5owewpzoIGDcRrRPccJ1yQtI6W6wWA5WGS6EuroCaAyYaWvcUqsuC4LYmmwhcRarMuo7J92E49JghTED8atgHK6dvhyyEf?purpose=fullsize"},
+
+
+
+
+{id:14, title:"Yamaha R7 — 689cc", category:"Yamaha", price:3950, specs:"Naked street · 689cc · LED lighting", img:"https://images.openai.com/static-rsc-4/_njsbTZSLSp3FoQectDtQmSUwp7zlDjppMWtqO-nbx96F-hmipdyA0xcWQ1maWzVlFhEaE6lfztNoSV2bAJHpuPe10VaZg7BOuXRc-ug_RZOGDFQE4PC3uxxhxCD-bXGVMo-wvfSDFztp2Zw_4ogkQLJL7sRYO1GZu4ciaU_E9zYexUuSX9TMFu9II5MZa4R?purpose=fullsize"},
+
+
+
+
+
+
+
+
+{id:14, title:"Yamaha Tenere 700", category:"Yamaha", price:3950, specs:"Naked street · 700cc · LED lighting", img:"https://images.openai.com/static-rsc-4/PndemwXZozPeen2kx2NbcsSmMZGwk0zyTw2s0Y9pd7LVxesGr_OPDerg5LOJYa4Ry0GKwBpo0Z20R6zSczj6dNP_tVqq8cEKkOggF6x7Oiche-cbajW3KuuTORkVsrHhLSp8ju0rhxgF-LsadAhS2ypBk1rVHD3Nxjg-QzE0d-2eCVr4UNpMQWIwCZ-om-_e?purpose=fullsize"},
+
+
+
+
+{id:14, title:"Yamaha FZ-S Fi V4 — 149cc", category:"Yamaha", price:12500, specs:"Naked street · 149cc · 4-cylinder", img:"https://images.openai.com/static-rsc-4/1aUmPXEF7iXM7SEhp5Ys_3KYciTvTAJG5N-Bqw0g7fIanoAmWENLIOqT5wwORKXRaS7bOj5JFE6yvvzyeVjyoxQmm4DSu9H797eRId3rEylTjY0f-wABl_c_Jh_7HUZg1DNl8bfG_3oVOOJ8O0VEPe2Uw4EIt6C64UaHXiCHh5amduZIeVxm0wA5FpYkowF6?purpose=fullsize"},
+
+
+
+
+
 
   {id:14, title:"Yamaha YZF-R6", category:"Yamaha", price:12500, specs:"Naked street · 599cc · 4-cylinder", img:"https://i.pinimg.com/736x/26/63/cc/2663ccecee16ace113ab7358749d6557.jpg"},
 
@@ -191,13 +230,49 @@ const BIKES = [
 
 
 
-  {id:29, title:"Moto Guzzi V7 Stone", category:"Italian Bike", price:9600, specs:"850cc transverse V-twin · Classic Italian heritage", img:"https://images.unsplash.com/photo-1580310614697-da7a6e0c34ed?w=700&q=80"},
+  {id:29, title:"CFMOTO 150NK — 150cc", category:"CFMOTO", price:9600, specs:"150cc ", img:"https://images.openai.com/static-rsc-4/vYUPOaWBi4Yzlh6MT_heBlfEhX3f5sOnIV9QMRKS3L1ZYG_SeinbkN3iKkShBtxWk2J0EOCsKvoAYh_pyEm4gKms1a8s-GwFU3XGgGJjCIUEFSumI5EMJTKYSP_YQHspMxdTCYPRnJ7tR5Y5pmLlUzO1TxdPNvoDHpXx8Bay4ALC66yNLxLFx9o_s1Ce7Wof?purpose=fullsize"},
 
 
 
 
-  {id:30, title:"Aprilia RS 457", category:"Italian Bike", price:8200, specs:"457cc parallel-twin · Sport fairing", img:"https://images.unsplash.com/photo-1622185204369-9d0cd6f6f5a8?w=700&q=80"},
+{id:29, title:"CFMOTO 650NK — 649cc", category:"CFMOTO", price:9600, specs:"649cc ", img:"https://www.cycleworld.com/resizer/9US0EPYbEwsDI3L4MvyzrE3Jbw8=/1440x0/filters:focal(930x780:940x790)/cloudfront-us-east-1.images.arcpublishing.com/octane/5AJJREML7ZAGRPWGDGDKGKPUJM.jpg"},
+
+
+
+
+{id:29, title:"CFMOTO 500SR VOOM — 500cc", category:"CFMOTO", price:9600, specs:"500cc ", img:"https://imgcdn.zigwheels.my/large/gallery/exterior/99/2543/cfmoto-500-sr-voom-slant-front-view-full-image-377196.jpg"},
+
+
+
+{id:29, title:"CFMOTO 675SR-R — 675cc", category:"CFMOTO", price:9600, specs:"675cc ", img:"https://images.squarespace-cdn.com/content/v1/598ac434893fc03ed7bdaff2/d80278a4-800a-4401-b532-67015e6de05f/IMG_1238.jpg"},
+
+
+{id:29, title:"CFMOTO 450MT — 449cc", category:"CFMOTO", price:9600, specs:"449cc ", img:"https://www.adventureshield.nl/333-medium_default/cfmoto-450mt.jpg"},
+
+
+
+
+{id:29, title:"CFMOTO 800NK — 799cc", category:"CFMOTO", price:9600, specs:"799cc ", img:"https://media.vxt.production.ldv-svcs.live/assets/cfmoto/images/2024_models/color-swap/24-mcy-800nk-hero-black-swap.jpg"},
+
+
+
+
+  {id:30, title:"CFMOTO 250NK  250cc", category:"CFMOTO", price:8200, specs:"250cc ", img:"https://images.openai.com/static-rsc-4/91qwbUQV-UQ5RElg9Ie7FshpDvv4IJ4CopSKsl74HSDWcB-RxZZhxAsUWI7nFzqBXyWZTZ4eWNxygeoOtKdn7PwPSe6p2CljGf92y8_Jiw1-9dlKVHlgx0UvsEPy4nggNKYhw9s5nfKS2DdOX8DLzxbXdivEND7h2T89gfepI82xZbk4HsCPa7QWBnjn8ZLJ?purpose=fullsize"},
+
+
+
+{id:29, title:"CFMOTO 650MT — 649cc", category:"CFMOTO", price:9600, specs:"649cc ", img:"https://images.openai.com/static-rsc-4/dOcGF769FjGPj9U-FpDu8o9c-w9X6mNNoLunNkhdzb9gttOXaRtE-2dTH5ZUJ386pO309KQ7DBTBonP8V774pYkAmO6Eb2M_TrXWYrJq3Y4NpmqsmhHzNCU7Sw9iSZRs60gJRo-tetejQ1rQ4sPPXBp0w-Ftzeb9LnEDPlXsigS2AwcAazqe1gBsJB3A0rYl?purpose=fullsize"},
+
+
+{id:29, title:"CFMOTO 800MT — 799cc", category:"CFMOTO", price:9600, specs:"799cc ", img:"https://imgcdn.zigwheels.my/medium/gallery/exterior/99/2434/cfmoto-800-mt-58838.jpg"},
+
+
+
+
+
 ];
+
+
 
 
 

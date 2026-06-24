@@ -16,25 +16,190 @@ const BIKES = [
   {id:12, title:"Vintage Peugeot Road", category:"Vintage", price:275, specs:"Original 1978 frame · Restored gears", img:"https://images.unsplash.com/photo-1517649763962-0c623066013b?w=700&q=80"},
 
   // Motorcycle brands
-  {id:13, title:"Yamaha R15 V4", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=700&q=80"},
-  {id:14, title:"Yamaha MT-15", category:"Yamaha", price:3950, specs:"Naked street · 155cc · LED lighting", img:"https://images.unsplash.com/photo-1622185135505-2d795003994a?w=700&q=80"},
-  {id:15, title:"KTM Duke 390", category:"KTM", price:5800, specs:"373cc single · TFT display · ABS", img:"https://images.unsplash.com/photo-1591637333472-4ef696c5a72d?w=700&q=80"},
-  {id:16, title:"KTM RC 390", category:"KTM", price:6100, specs:"Track-focused fairing · Slipper clutch", img:"https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?w=700&q=80"},
-  {id:17, title:"Honda CB350RS", category:"Honda", price:4500, specs:"348cc retro roadster · Disc brakes", img:"https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=700&q=80"},
-  {id:18, title:"Honda CBR650R", category:"Honda", price:9200, specs:"649cc inline-4 · Sport fairing", img:"https://images.unsplash.com/photo-1611241893603-3c359704e0ee?w=700&q=80"},
-  {id:19, title:"Bajaj Pulsar NS200", category:"Bajaj", price:2600, specs:"199cc · Perimeter frame · Sporty", img:"https://images.unsplash.com/photo-1580310614697-da7a6e0c34ed?w=700&q=80"},
-  {id:20, title:"Bajaj Dominar 400", category:"Bajaj", price:3800, specs:"373cc tourer · Twin-channel ABS", img:"https://images.unsplash.com/photo-1622185204369-9d0cd6f6f5a8?w=700&q=80"},
-  {id:21, title:"Royal Enfield Classic 350", category:"Royal Enfield", price:4300, specs:"349cc thump · Retro chrome styling", img:"https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=700&q=80"},
-  {id:22, title:"Royal Enfield Himalayan", category:"Royal Enfield", price:5200, specs:"411cc adventure tourer · Long travel suspension", img:"https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=700&q=80"},
-  {id:23, title:"Triumph Speed 400", category:"Triumph", price:5400, specs:"398cc single · Premium retro build", img:"https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?w=700&q=80"},
-  {id:24, title:"Triumph Street Triple", category:"Triumph", price:11500, specs:"765cc triple · Naked street performance", img:"https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=700&q=80"},
-  {id:25, title:"Benelli Leoncino 500", category:"Benelli", price:6700, specs:"500cc parallel-twin · Scrambler styling", img:"https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?w=700&q=80"},
-  {id:26, title:"Benelli TRK 502X", category:"Benelli", price:7300, specs:"Adventure tourer · Spoked wheels", img:"https://images.unsplash.com/photo-1591637333472-4ef696c5a72d?w=700&q=80"},
-  {id:27, title:"Ducati Monster 821", category:"Ducati", price:13800, specs:"L-twin engine · Italian naked icon", img:"https://images.unsplash.com/photo-1611241893603-3c359704e0ee?w=700&q=80"},
-  {id:28, title:"Ducati Panigale V2", category:"Ducati", price:18900, specs:"955cc superbike · Full race fairing", img:"https://images.unsplash.com/photo-1609630875171-b1321377ee65?w=700&q=80"},
+  {id:13, title:"Yamaha R15 V4", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://i.pinimg.com/736x/3a/51/eb/3a51ebc1c374b913e7dc18b43c4f4a4e.jpg"},
+  {id:14, title:"Yamaha MT-15", category:"Yamaha", price:3950, specs:"Naked street · 155cc · LED lighting", img:"https://iamabiker.com/wp-content/uploads/2022/07/Yamaha-MT-15-V2-HD-wallpaper-1-1536x864.jpg"},
+
+  {id:14, title:"Yamaha YZF-R6", category:"Yamaha", price:12500, specs:"Naked street · 599cc · 4-cylinder", img:"https://i.pinimg.com/736x/26/63/cc/2663ccecee16ace113ab7358749d6557.jpg"},
+
+   {id:14, title:"Yamaha RX100", category:"Yamaha", price:1250, specs:"RX KING .100cc", img:"https://images.openai.com/static-rsc-4/mUid5S5xK2KEo904-IUO5EeZjujBHwdMGSibep3hj2SBzb90yABvsGJrYBT23WWZ4k5nBbFvHug6_t1TkRsiIOV8pmrJnXQvBoUwitjEv20JsjbL466qYQ5Z1_HS50YyFQLatSZwdgWPOcUXYYEpJ8ZXx_hkDvLfuIYeZkKdByTP4OTpM0ArWbKZbhoqrlZF?purpose=fullsize"},
+  
+
+  {id:15, title:"KTM Duke 390", category:"KTM", price:5800, specs:"373cc single · TFT display · ABS", img:"https://images.unsplash.com/photo-1608975213589-14e7f23aeab7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHVrZSUyMDM5MHxlbnwwfHwwfHx8MA%3D%3D"},
+  
+  {id:16, title:"KTM 1390 Super Duke R", category:"KTM", price:12000, specs:"190 HP.V-Twin", img:"https://i.pinimg.com/1200x/af/f1/62/aff162e5c6474dea2f8c1fe3ba04887c.jpg"},
+
+{id:16, title:"KTM RC 390", category:"KTM", price:6100, specs:"Track-focused fairing · Slipper clutch", img:"https://i.pinimg.com/736x/91/bf/19/91bf193473f61501b1557ed2d0794c75.jpg"},
+
+  {id:17, title:"Honda CBR1000RR-R Fireblade", category:"Honda", price:28999, specs:"999cc MotoGP-inspired Aerodynamics", img:"https://4kwallpapers.com/images/walls/thumbs_2t/6942.jpg"},
+
+  {id:18, title:"Honda CBR600R", category:"Honda", price:9200, specs:"600cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+{id:18, title:"Honda Shine", category:"Honda", price:900, specs:"125 cc inline-4", img:"https://images.openai.com/static-rsc-4/TB6TUa6kqAR9sg0Enh_DUrSOHUPZdqQRD_JjeLPax8WjkT4dMrPoTgMBjY3HekhMMz3MvEoRUFck1eXLFMpkJLdtq06m7PiM3jOSmmgEAZ8yWxiZPCU4r8WBmQcZn-NwQfjgIuIG80aIzSzlzKczGfjPoPbZ8hZuwD4Ar-OEiSMhH-fi6j6IupD0RlSLxJh-?purpose=fullsize"},
+
+{id:18, title:"Honda Gold Wing", category:"Honda", price:25000, specs:"1833cc 6-cylinder engine", img:"https://www.motorcyclecruiser.com/resizer/nrk2Ft6YVRf-H3oYZNs2zRAup5A=/1000x750/filters:focal(45x45:55x55)/cloudfront-us-east-1.images.arcpublishing.com/octane/HMWD4LG2476JUDJP3HHHSTHQQQ.jpg"},
+
+
+  {id:19, title:" Pulsar NS200", category:"Bajaj", price:2600, specs:"199cc · Perimeter frame · Sporty", img:"https://i.pinimg.com/736x/9f/36/cb/9f36cb4aa352a082dfa16d8b82ed499e.jpg"},
+
+
+  {id:20, title:" Dominar 400", category:"Bajaj", price:3800, specs:"373cc tourer · Twin-channel ABS", img:"https://images.unsplash.com/photo-1644879796743-32f929189b81?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+
+  {id:19, title:" Pulsar 220", category:"Bajaj", price:2600, specs:"200cc · Perimeter frame ", img:"https://w0.peakpx.com/wallpaper/87/537/HD-wallpaper-pulsar220-220f-pulsar.jpg"},
+
+{id:19, title:" Pulsar 150", category:"Bajaj", price:2600, specs:"150cc", img:"https://w0.peakpx.com/wallpaper/62/192/HD-wallpaper-pulsar-150-bajaj-pulsar-150-motorcycle.jpg"},
+
+
+  {id:21, title:"Royal Enfield Classic 350", category:"Royal Enfield", price:4300, specs:"349cc thump · Retro styling", img:"https://i.pinimg.com/750x/8e/f7/ec/8ef7ec13cb860659c36e54a2208da5e3.jpg"},
+
+   {id:21, title:"Royal Enfield Super Meteor 650", category:"Royal Enfield", price:4300, specs:"650cc thump · Retro styling", img:"https://wallpaperaccess.com/full/23189321.jpg"},
+
+ {id:21, title:"Royal Enfield Bear 650", category:"Royal Enfield", price:4400, specs:"650cc thump · Retro styling", img:"https://external-preview.redd.it/wonder-why-royal-enfield-is-calling-its-latest-the-bear-650-v0-c-s9JsPCOlY7A7Igq2tvltpkGxje83z0SkgExf-xYIM.jpg?auto=webp&s=d74e535c6756e1746c5f3535c26f96a3d0bfff94"},
+
+
+  {id:21, title:"Royal Enfield Himalayan 450", category:"Royal Enfield", price:4500, specs:"450cc thump · Retro  styling", img:"https://i.pinimg.com/1200x/20/c4/a9/20c4a9e2a5f30365873f4e7840188ef4.jpg"},
+
+  
+  {id:22, title:"Royal Enfield Hunter 350", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://imgcdn.zigwheels.my/large/gallery/exterior/89/1881/royal-enfield-hunter-350-right-side-viewfull-image-390792.jpg"},
+
+
+  {id:23, title:"Triumph Speed 400", category:"Triumph", price:5400, specs:"398cc single · Premium retro build", img:"https://d2lkn59rua3ry2.cloudfront.net/wp-content/uploads/2026/03/Triumph-Motorcycles-2.jpg"},
+
+
+  {id:24, title:"Triumph Scrambler 400 X", category:"Triumph", price:11500, specs:"400cc triple · Naked street performance", img:"https://www.apex66.co.uk/wp-content/uploads/2025/07/Triumph-Scrambler-400X-06.jpg"},
+
+  {id:24, title:"Triumph Speed Triple 1200 RS", category:"Triumph", price:11500, specs:"1200cc triple · Naked street performance", img:"https://w0.peakpx.com/wallpaper/914/45/HD-wallpaper-triumph-speed-triple-motorcycle-triumph.jpg"},
+
+{id:24, title:"Triumph Bonneville T120", category:"Triumph", price:11500, specs:"900cc triple · Naked street performance", img:"https://i.pinimg.com/736x/b6/0f/83/b60f8357950b83960fe96f0d5e35c1bf.jpg"},
+
+{id:24, title:"Triumph Bonneville T100", category:"Triumph", price:11500, specs:"900cc triple · Naked street performance", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNhlsEeqt_BAJdT__Foej0YUU-_VubXu8RUssuzoI-5QQvKUI7r0j2ogFX&s=10"},
+
+
+
+
+{id:24, title:"Triumph Speed Twin 900", category:"Triumph", price:11500, specs:"900cc triple · Naked street performance", img:"https://images.openai.com/static-rsc-4/v3BHOCqjyiuIWG1orAfNEVPu0QbLiwTUImGeJomKSVGpae8h9nxt8tUdO7yq7BScas9hZIpkDuTuA2BJ4YGag-zt7dlj5J-GhCaACIy3BsLs64A7tjXjC2l68jdg8bAcNupfWgN4-Y6Q0PU1naCXUH1M9Fh-nVjbqiIubN4qOFbZo3cg3PaIRqDgYGUeOKET?purpose=fullsize"},
+
+
+ {id:24, title:"Triumph Street Triple 765", category:"Triumph", price:11500, specs:"765cc triple · Naked street performance", img:"https://mir-s3-cdn-cf.behance.net/projects/404/fd77bc227089759.Y3JvcCw1MTEzLDQwMDAsNDQzLDA.jpg"},
+
+
+
+  {id:25, title:"Benelli Leoncino 500", category:"Benelli", price:6700, specs:"500cc parallel-twin · Scrambler styling", img:"https://c.ndtvimg.com/2019-08/gch0vbr_benelli-leoncino-500-_625x300_05_August_19.jpg"},
+
+
+
+
+{id:25, title:"Benelli 402S — 400cc", category:"Benelli", price:6700, specs:"400cc parallel-twin · Scrambler styling", img:"https://w0.peakpx.com/wallpaper/155/834/HD-wallpaper-benelli-tnt135-2018-bikes-darkness-superbikes-benelli.jpg"},
+
+
+
+{id:25, title:"Benelli TRK 502X — 500cc", category:"Benelli", price:6700, specs:"500cc parallel-twin · Scrambler styling", img:"https://images.openai.com/static-rsc-4/9nmmu8hBP_6gxwcMHZfG8O22uOq5m1AOCnL8q9nn7VS7SM0gSR0fmRZTbGEbJMrPzTnZuAhN-f0Cy71zswQdC0PmeqpbVYBx8a04TpZag-FpTqFH5IPcIjz5Jw2ok6SYm5dP7R5-Y17LzXFFVXSA5Og-FWAC02RFeBYlmI_WDj01fVMXer9YYvJjrFqet5TF?purpose=fullsize"},
+
+
+
+{id:25, title:"Benelli tnt 250cc", category:"Benelli", price:6700, specs:"250cc parallel-twin · Scrambler styling", img:"https://i0.wp.com/cdn.warungasep.net/2019/05/benelli-tnt-250-2019.jpg"},
+
+
+
+
+{id:25, title:"Benelli TNT 600i — 600cc", category:"Benelli", price:6700, specs:"600cc parallel-twin · Scrambler styling", img:"https://i.pinimg.com/originals/c5/48/36/c54836dd0b4bb6a3e6a5110860e8ead9.jpg"},
+
+
+
+{id:25, title:"Benelli TNT 300 — 300cc", category:"Benelli", price:6700, specs:"300cc parallel-twin · Scrambler styling", img:"https://www.bikesrepublic.com/wp-content/uploads/2016/02/Benelli-TNT-300-1.jpg"},
+
+
+
+{id:25, title:"Benelli 302R — 300cc", category:"Benelli", price:6700, specs:"300cc parallel-twin · Scrambler styling", img:"https://images.openai.com/static-rsc-4/eGvvS9NdK5aO3L7JcO9TNDBDTsbUcMPSE2Kj8rpVp3hZAPwXGikvb3CovwHquZwR__sX8CApE7ySXXSEPfI1WfFpNWaLlGZhFmKUTCLYVyFEV1w8Px6iepMnZEbwQLef4TekJ6QH63RQDHlQ-FYGwbxO7KsF8Q999qrJH2DncXYWjxPkNjh3pKMH0cC5PpkO?purpose=fullsize"},
+
+
+
+
+{id:25, title:"Benelli TNT 15 — 150cc", category:"Benelli", price:6700, specs:"150cc parallel-twin · Scrambler styling", img:"https://images.openai.com/static-rsc-4/TdzIWkgoLqRgKyJZindrXHhUfOPuRztcacvkzgfup6ebLDi16EvX7gPrdpy7SI7jdBq8-fFR7i-NhDx6FcY-sDwMmfMtvspwDvNgaV3Sf2f1U8eJSCRrqdImMImLfPX8mGyYyCcSF7Bou2_JE-DKAw1CnR3aaOFpyMBLDiw_to8wjOyzQw9M3P1BwZrkB84b?purpose=fullsize"},
+
+
+
+  {id:26, title:"Benelli TRK 502X", category:"Benelli", price:7300, specs:"Adventure tourer · Spoked wheels", img:"https://images.openai.com/static-rsc-4/cMlxb2EYX0wBHyHK6MvJUICfVrk9-3NKyFwH-5OyyP7utRtl8WijwX9Gx5d00TTbbB1b1_kLMNFJllaIn3NQRTxk8r4krVjYQ0ZNiW2yNAokJpA8RdKfLE8vG0nklxo9zJg4ibeKI5gBn7up5uXmQVmw6T3M-IVIBnhTYKGmtO_l1mY8RiBk0wqnRWTYeJ7l?purpose=fullsize"},
+
+
+
+
+  {id:27, title:"Ducati Monster 821", category:"Ducati", price:13800, specs:"L-twin engine · Italian naked icon", img:"https://images.openai.com/static-rsc-4/3cQah3Q3B23qhkgeYmGA7CLhwcmR_O15PJRACMx1NxxsENDepp9vgUrErxxYUcvjNsul88x1akHOmOvLKoNVNXDYxb_pd4F7LR1TCe9UnQFKyytLx7ToxU_K8d79E9UJZgsJBJ6DjcuHwuckvSb8mW-BBIHRQbkWEOXDl_gp19weMWbYafp-OdCeHuBgCjXi?purpose=fullsize"},
+
+
+
+
+  {id:28, title:"Ducati Panigale V2", category:"Ducati", price:18900, specs:"955cc superbike · Full race fairing", img:"https://wallpapercave.com/wp/wp8254287.jpg"},
+
+
+  
+{id:28, title:"Ducati Hypermotard 950", category:"Ducati", price:18900, specs:"950cc superbike · Full race fairing", img:"https://imgcdn.zigwheels.my/large/gallery/exterior/58/1854/ducati-hypermotard-950-slant-rear-view-full-image-854813.jpg"},
+
+
+{id:28, title:"Ducati Monster — 937cc", category:"Ducati", price:18900, specs:"937cc superbike · Full race fairing", img:"https://images3.alphacoders.com/849/thumb-1920-849162.jpg"},
+
+
+
+{id:28, title:"Ducati Streetfighter V2 — 955cc", category:"Ducati", price:18900, specs:"955cc superbike · Full race fairing", img:"https://w0.peakpx.com/wallpaper/294/1015/HD-wallpaper-ducati-streetfighter-v4-sp-launched-in-india-ducati-streetfighter-v4s.jpg"},
+
+
+
+
+
+{id:28, title:"Ducati Streetfighter V4 — 1103cc", category:"Ducati", price:18900, specs:"1103cc superbike · Full race fairing", img:"https://wallpapercave.com/wp/wp15704246.jpg"},
+
+
+
+
+{id:28, title:"Ducati Multistrada V2 — 937cc", category:"Ducati", price:18900, specs:"937cc superbike · Full race fairing", img:"https://imgcdn.zigwheels.my/large/gallery/exterior/58/1869/ducati-multistrada-v2-slant-rear-view-full-image-397426.jpg"},
+
+
+
+{id:28, title:"Ducati Multistrada V4 — 1158cc", category:"Ducati", price:18900, specs:"1158cc superbike · Full race fairing", img:"https://images.openai.com/static-rsc-4/OpFbb3b_YkTvU5FKqIkoD7hfq8kpvL8h9h5dpaIy0Q28lEOdh44qByJ31NbI0DjI8zpII-N86drGnoK-iVcyKgpqNcm5y_G6Ie88b_0zqL9sYelKOxGcLa8sWqYyEH-9_llPIztIr8uZXWADjVtXde4uCZuZ-Ri6Rsimezkp3fQih-bEUN846_9MEBAdmjAV?purpose=fullsize"},
+
+
+
+
+{id:28, title:"Ducati DesertX — 937cc", category:"Ducati", price:18900, specs:"937cc superbike · Full race fairing", img:"https://images.autox.com/uploads/2021/12/Ducati-DesertX-Front-three-quarter-static-2.jpg"},
+
+
+
+{id:28, title:"Ducati Diavel V4 — 1158cc", category:"Ducati", price:18900, specs:"1158cc superbike · Full race fairing", img:"https://c4.wallpaperflare.com/wallpaper/409/195/639/ducati-ducati-diavel-ducati-wallpaer-motorsport-wallpaper-preview.jpg"},
+
+
+
+{id:28, title:"Ducati Panigale V4 — 1103cc", category:"Ducati", price:18900, specs:"1103cc superbike · Full race fairing", img:"https://i.pinimg.com/1200x/de/4d/ec/de4dec487694b416450516aa5609bc01.jpg"},
+
+
+{id:28, title:"Ducati XDiavel V4 — 1158cc", category:"Ducati", price:18900, specs:"1158cc superbike · Full race fairing", img:"https://c4.wallpaperflare.com/wallpaper/644/949/246/ducati-diavel-2017-wallpaper-preview.jpg"},
+
+{id:28, title:"Ducati Hypermotard V2", category:"Ducati", price:18900, specs:"890cc superbike · Full race fairing", img:"https://images.openai.com/static-rsc-4/WDPwokW8HZae5Rd0uVaCyeMw1lW-td5SlN9gQRv11JdGXjCIKAVvBVcA4vo_51EXH5652WsAPVndmiH3HkXoPaGhtqzrixlBWyMYtQP8BSG4d6kbE7c_DMZS4Boj34LxilrBqNbkQSKSjsrT38r3OA-LakQJXCi1Oo41dxccXZLSTPbzZle4d0tsEqG5-gEC?purpose=fullsize"},
+
+
+{id:28, title:"Ducati Hypermotard 950 SP", category:"Ducati", price:18900, specs:"950cc superbike · Full race fairing", img:"https://images.openai.com/static-rsc-4/JQxOsl6utvvvSG-VF8GG4jNAT-8YLG5dkHRU05k4fuRtNhlfjHRnLEcyv9xKtrOCTbQXBWJJrqjlaamwkzOfobdO_33GpVqT964lZfSTxGm_rRvOr6_lSCyB8-E4QwpumjRs6fOyZGIGrD-jsQWu2M_aJxqY_SpgyyWPu2gxefbOdnitGrcqaDI2EcIHNuNE?purpose=fullsize"},
+
+
+{id:28, title:"Ducati Scrambler Icon — 803cc", category:"Ducati", price:18900, specs:"803cc superbike · Full race fairing", img:"https://cdn-s3.autocarindia.com/legacy/cdni/ExtraImages/20151203115915_3.jpg?w=728&q=75"},
+
+
+
+{id:28, title:"Ducati Hypermotard 950 RVE", category:"Ducati", price:18900, specs:"950cc superbike · Full race fairing", img:"https://images.openai.com/static-rsc-4/CbHjyK8JywJhO075DqUrQ25aNMqmbIqqTH0XN9bvgZN_nsAayeuCzuh2--GUmah7nLuvODqj5x1_QOprCKAsnLY-Ua1MY9wxl7yZG3D77syuxnPS8393BaK2pOxvAf0m_oXFuMLd8caVSCPrGtcYOQSVxhTL-ES9n0oYyaTUDqoWM8gQw7mpe6B5nubYVeE4?purpose=fullsize"},
+
+
+
+{id:28, title:"Ducati Scrambler Full Throttle — 803cc", category:"Ducati", price:18900, specs:"803cc superbike · Full race fairing", img:"https://images.openai.com/static-rsc-4/YGscPFzH2s2hZYqZqa1FttPLKoJ6Lz35kb2aBXs7ov_9sMhQKs3K-qY1v3y4f7jJ4UT8sTcdxlRerZ_p8km8SIRZQsJTFEWMrQiB8wvqrCEQI2m-kVdSgMM7mjolSA1fzGK-C-SNj0UZOA1TqXbonZ7BoaHLRpxOI0TvjAvzqu9At4KDuW4pdug6Q0U6R90T?purpose=fullsize"},
+
+
+
+
   {id:29, title:"Moto Guzzi V7 Stone", category:"Italian Bike", price:9600, specs:"850cc transverse V-twin · Classic Italian heritage", img:"https://images.unsplash.com/photo-1580310614697-da7a6e0c34ed?w=700&q=80"},
+
+
+
+
   {id:30, title:"Aprilia RS 457", category:"Italian Bike", price:8200, specs:"457cc parallel-twin · Sport fairing", img:"https://images.unsplash.com/photo-1622185204369-9d0cd6f6f5a8?w=700&q=80"},
 ];
+
+
 
 const STORAGE_KEYS = { users:"ih_users", session:"ih_session", listings:"ih_listings", orders:"ih_orders", cart:"ih_cart" };
 

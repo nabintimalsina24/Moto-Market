@@ -28,6 +28,56 @@ const BIKES = [
 
 
 
+
+{id:14, title:"Yamaha MT-09 — 890cc", category:"Yamaha", price:3950, specs:"Naked street · 890cc · LED lighting", img:"https://i.pinimg.com/736x/1f/ff/2b/1fff2b1f975a7161ae5dbdcc8e23b5c9.jpg"},
+
+
+
+
+
+{id:14, title:"Yamaha Tracer 9 — 890cc", category:"Yamaha", price:3950, specs:"Naked street · 890cc · LED lighting", img:"https://wallpapercat.com/w/full/d/9/a/11319-2000x1125-desktop-hd-yamaha-tracer-9-gt-wallpaper-photo.jpg"},
+
+
+{id:14, title:"Yamaha XSR125c", category:"Yamaha", price:3950, specs:"Naked street · 125cc · LED lighting", img:"https://images.openai.com/static-rsc-4/VPtBV1Yo8v39U0bVU9BB1HS8nLGZ18YUpNiJM5fUgTeFvSDEu6qHSUtbrmlMylem-h2jBkPtWvQ95w2sxGRv0i9v3DoxwWHoEIDKFLCA9uOiXLEr6S-1LJ6BOIGPf12yhVoX4CtWhPwzpIjrCm9dSgvxqENkv_n7sBHVGU9Jg3CL4oLL15cMHIfk7KCYlkzm?purpose=fullsize"},
+
+
+
+
+
+
+{id:14, title:"Yamaha XSR155", category:"Yamaha", price:3950, specs:"Naked street · 155cc · LED lighting", img:"https://images.openai.com/static-rsc-4/isXC-rCwc3qkpRNkzenOT1eJLjYbmXB-C3pOYPLSFclraTOtif_Sav77xJURKqa5tWWyjqJTfKE9JhQVBL4nPxuokgpN0gYl6efo_7t892B6WLhujE44wmjIkLa2t5E4Wtoh6yoGMWwcc5zuHYve2XG7bk3rt1XcaM4RV3kjRLsS3Fc7qOKq3DZl4yDHySf2?purpose=fullsize"},
+
+
+
+
+
+
+{id:14, title:"Yamaha XSR700", category:"Yamaha", price:3950, specs:"Naked street · 700cc · LED lighting", img:"https://images.openai.com/static-rsc-4/ev5tj7zYgLUo2xiQ7eNnb-NHxBy3pjdjBZQvz7MnuyuOedkZY0VUKubt2eSbuL7_Bwb0-_ZQgZSQlxFRkr2u9zvCbzB4f1gdnNb65R9eLr6k0v0iT-e6TasG5PARNW60uis0SPYkuigBYiZ5HHQ7YrcqglYXljqjsf_Sq5aVIK7FeHKJkzam7YWLtDgowhZa?purpose=fullsize"},
+
+
+{id:14, title:"Yamaha XSR900", category:"Yamaha", price:3950, specs:"Naked street · 900cc · LED lighting", img:"https://images.openai.com/static-rsc-4/0iz0ATPzsmGmj768F2XHgUEkYxhTk6PLKXh2Aay9GVcjsXxEaw2TuiUuGrlbHAhKqdFrZy7WpuwQ_vHcrvONmZcVhMxlVZ2c7SCbgpG_OGumY7OoZaA5O2VGBQQRxYUFBdoA-LfF1YpaIy-JBJNx5448vIEmspwTuFMVjEq5TLsJY3sfdTUOIOFM2aMaUQJ4?purpose=fullsize"},
+
+
+
+{id:14, title:"Yamaha WR155R", category:"Yamaha", price:3950, specs:"Naked street · 155cc · LED lighting", img:"https://images.openai.com/static-rsc-4/tpMr7n29KGiH1KgyaI0T1lUQ6ecmd1kc0ed4Xj262YEC2DksOvj7uLEp29SbI96dOm2G1ttct02dSh-pgBqzIWJ1s_f-E6r0zWbvFB1arQLhQfCSqt4uBGYCN1hnXt7gBOPg9A67m924CiWbD30RIlzaR5tcOWdasoEaUu0c8IZnVvJECVwUCiokmV1D7gLn?purpose=fullsize"},
+
+
+{id:14, title:"Yamaha YZ125", category:"Yamaha", price:3950, specs:"Naked street · 125cc · LED lighting", img:"https://images.openai.com/static-rsc-4/6Vnf4atAkQ73q3cQt3GZaiHwxGdy8i9KkwYjGs2jAsmMWGeAN1zFCDI1-Sr7vpaYzO2tFEFz5Ut7AN9UdNm1zt00ZTMgTOvALDFTC7VcfEnfsT2k52Re8YL2Y0LpV8Wt4lnw3jmyiLh5Pl-KMTSGMSuHTfem8A4dAMWR6xz3TqahiEhmn9O-iRTAAbGOAZ2O?purpose=fullsize"},
+
+
+
+
+{id:14, title:"Yamaha YZ450F", category:"Yamaha", price:3950, specs:"Naked street · 450cc · LED lighting", img:"https://images.openai.com/static-rsc-4/kLnfBa0Z1lyDuflu4Qq0mwYnXN8oqwZd6zLusplkjS3wsC5GPptAn2nMpug4ltDrEmbgS0Hzg_vY3dTXrMz2j1kz_bdhvul5dKOdxp42Yp55keFxCFW-VGH6kHUymueqcgb8osCXZ6v_BeFxkGPMLpnCM_zNcmRsPtlfrBtm54sg8teZOGlXC597pR5ZrPy_?purpose=fullsize"},
+
+
+
+
+
+{id:14, title:"Yamaha Tracer 7 — 689cc", category:"Yamaha", price:3950, specs:"Naked street · 689cc · LED lighting", img:"https://b1944490.smushcdn.com/1944490/wp-content/uploads/sites/46/2025/05/2025_yam_mt07tr_eu_vrsk_sta_001_03_preview.jpg?lossy=2&strip=1&webp=1"},
+
+
+
+
 {id:14, title:"Yamaha R9 — 890cc", category:"Yamaha", price:3950, specs:"Naked street · 890cc · LED lighting", img:"https://roaddirt.tv/wp-content/uploads/2025/03/2025_Yamaha_R9_PIR-Statics_IntensityWhite_Redline-JosephAgustinPhoto-DSC07222.jpg"},
 
 
@@ -253,6 +303,9 @@ const BIKES = [
 
 
 {id:29, title:"CFMOTO 800NK — 799cc", category:"CFMOTO", price:9600, specs:"799cc ", img:"https://media.vxt.production.ldv-svcs.live/assets/cfmoto/images/2024_models/color-swap/24-mcy-800nk-hero-black-swap.jpg"},
+
+
+{id:29, title:"CX 250cc", category:"CFMOTO", price:9600, specs:"250cc ", img:"https://hamrobazaar.blr1.cdn.digitaloceanspaces.com/User/Posts/2026/04/17/f40a866f-fe09-b166-aeb4-bdc402b97005.jpeg"},
 
 
 

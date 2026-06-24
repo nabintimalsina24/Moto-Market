@@ -276,7 +276,26 @@ const BIKES = [
 
   {id:18, title:"Honda CBR600R", category:"Honda", price:9200, specs:"600cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
 
+
+
+  {id:18, title:"Honda CBR500R", category:"Honda", price:9200, specs:"500cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+
+
+  {id:18, title:"Honda CBR250RR", category:"Honda", price:9200, specs:"250cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+
+ {id:18, title:"Honda CBR150R", category:"Honda", price:9200, specs:"150cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+
+
 {id:18, title:"Honda Shine", category:"Honda", price:900, specs:"125 cc inline-4", img:"https://images.openai.com/static-rsc-4/TB6TUa6kqAR9sg0Enh_DUrSOHUPZdqQRD_JjeLPax8WjkT4dMrPoTgMBjY3HekhMMz3MvEoRUFck1eXLFMpkJLdtq06m7PiM3jOSmmgEAZ8yWxiZPCU4r8WBmQcZn-NwQfjgIuIG80aIzSzlzKczGfjPoPbZ8hZuwD4Ar-OEiSMhH-fi6j6IupD0RlSLxJh-?purpose=fullsize"},
+
+
+
 
 {id:18, title:"Honda Gold Wing", category:"Honda", price:25000, specs:"1833cc 6-cylinder engine", img:"https://www.motorcyclecruiser.com/resizer/nrk2Ft6YVRf-H3oYZNs2zRAup5A=/1000x750/filters:focal(45x45:55x55)/cloudfront-us-east-1.images.arcpublishing.com/octane/HMWD4LG2476JUDJP3HHHSTHQQQ.jpg"},
 
@@ -325,8 +344,61 @@ const BIKES = [
 
 
 
+{id:18, title:"Honda CB150R", category:"Honda", price:9200, specs:"150cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
 
 
+{id:18, title:"Honda CB300R", category:"Honda", price:9200, specs:"300cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda CB650R", category:"Honda", price:9200, specs:"650cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+
+{id:18, title:"Honda CB750 Hornet", category:"Honda", price:9200, specs:"750cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+
+{id:18, title:"Honda CRF450RWE", category:"Honda", price:9200, specs:"450cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+{id:18, title:"Honda CB1000 Hornet", category:"Honda", price:9200, specs:"1000cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda CRF450RWE", category:"Honda", price:9200, specs:"450cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda NX500", category:"Honda", price:9200, specs:"500cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda XL750 Transalp", category:"Honda", price:9200, specs:"750cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda Africa Twin", category:"Honda", price:9200, specs:"450cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda Rebel 300", category:"Honda", price:9200, specs:"300cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda Rebel 500", category:"Honda", price:9200, specs:"500cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda Rebel 1100", category:"Honda", price:9200, specs:"1100cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+
+
+{id:18, title:"Honda CRF450RWE", category:"Honda", price:9200, specs:"450cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+
+{id:18, title:"Honda Unicorn", category:"Honda", price:9200, specs:"450cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+
+
+{id:18, title:"Honda Hornet 2.0", category:"Honda", price:9200, specs:"450cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
+
+{id:18, title:"Honda SP 125", category:"Honda", price:9200, specs:"125cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
 
 
 

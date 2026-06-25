@@ -231,9 +231,9 @@
         <div class="summary-card">
           <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:14px;">Payment Method</h3>
           <div class="pay-methods">
-            <button class="pay-method active" data-method="card" onclick="setPayMethod('card')">Card</button>
-            <button class="pay-method" data-method="upi" onclick="setPayMethod('upi')">UPI</button>
-            <button class="pay-method" data-method="cod" onclick="setPayMethod('cod')">Cash on Delivery</button>
+            <button class="pay-method active" data-method="eSewa" onclick="setPayMethod('eSewa')">eSewa</button>
+            <button class="pay-method" data-method="Khalti" onclick="setPayMethod('Khalti')">Khalti</button>
+            <button class="pay-method" data-method="Cash" onclick="setPayMethod('cod')">Cash on Delivery</button>
           </div>
 
           <div id="payCardFields">
@@ -246,7 +246,7 @@
             <div class="field-row">
               <div class="field"><label>Card Holder Name</label><input type="text" id="cardName" placeholder="Name on card"></div>
             </div>
-            <div class="field-row">
+            <div class="field-row"> 
               <div class="field"><label>Expiry</label><input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5"></div>
               <div class="field"><label>CVV</label><input type="password" id="cardCvv" placeholder="•••" maxlength="3"></div>
             </div>

@@ -278,17 +278,21 @@ const BIKES = [
   {id:18, title:"Honda CBR600R", category:"Honda", price:9200, specs:"600cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
 
 
+  {id:18, title:"Honda CBR250R", category:"Honda", price:9200, specs:"250cc inline-4 · Sport fairing", img:"https://imgcdn.zigwheels.my/large/gallery/exterior/60/876/honda-cbr250-marketing-image-232404.jpg"},
+
+
+
 
   {id:18, title:"Honda CBR500R", category:"Honda", price:9200, specs:"500cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
 
 
 
 
-  {id:18, title:"Honda CBR250RR", category:"Honda", price:9200, specs:"250cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+  {id:18, title:"Honda CBR250RR", category:"Honda", price:9200, specs:"250cc inline-4 · Sport fairing", img:"https://wallpaperaccess.com/full/3593094.jpg"},
 
 
 
- {id:18, title:"Honda CBR150R", category:"Honda", price:9200, specs:"150cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+ {id:18, title:"Honda CBR150R", category:"Honda", price:9200, specs:"150cc inline-4 · Sport fairing", img:"https://wallpapercave.com/wp/wp11814138.jpg"},
 
 
 
@@ -302,18 +306,16 @@ const BIKES = [
 
 
 
-///baki tala ko bike ko photo halna
+{id:18, title:"Honda CRF110F", category:"Honda", price:9200, specs:"110cc single-cylinder · Trail-ready", img:"https://images.openai.com/static-rsc-4/dCD2kqbNI6wF29Mmhro9YpQZ6e46ve0Rl3gpVti_BjSt3CmZy8a1_oYfe1zMHa15h3AoHiGuWnpEwb7DCWSDNSsRJrlV-exgrZdgrJA66UZ9Qjix273MBjXzjhhJ6npQXSsaRqTFrz5xbSOH15OadhorWvYM60VjBQ330QGiB41eNG_Y38ABS4F6AApRLTTF?purpose=fullsize"},
 
-{id:18, title:"Honda CRF110F", category:"Honda", price:9200, specs:"110cc single-cylinder · Trail-ready", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
-
-{id:18, title:"Honda CRF125F", category:"Honda", price:9200, specs:"125cc single-cylinder · Trail-ready ", img:"https://images.openai.com/static-rsc-4/dCD2kqbNI6wF29Mmhro9YpQZ6e46ve0Rl3gpVti_BjSt3CmZy8a1_oYfe1zMHa15h3AoHiGuWnpEwb7DCWSDNSsRJrlV-exgrZdgrJA66UZ9Qjix273MBjXzjhhJ6npQXSsaRqTFrz5xbSOH15OadhorWvYM60VjBQ330QGiB41eNG_Y38ABS4F6AApRLTTF?purpose=fullsize"},
+{id:18, title:"Honda CRF125F", category:"Honda", price:9200, specs:"125cc single-cylinder · Trail-ready ", img:"https://images.openai.com/static-rsc-4/iAVAbIQkpyF-TS3mzC3KGmJYYfpa9PQN69NCHMyrTk6ukRJ-TlpWzFFulXK7TNgRE0urWcIboitIwnZnFTNKStBumObEuEltYLq06lRuhgnFYutR37UJJOxKaFfMWuF3xk8Jbr7xl3b78wyYiAEeEM7yUwGu3Z8ykOsHZrBbKqCAqjj_UOELqsxSSXC3p_82?purpose=fullsize"},
 
 
 
 {id:18, title:"Honda CRF150R", category:"Honda", price:9200, specs:"150cc single-cylinder · Trail-ready", img:"https://images.openai.com/static-rsc-4/oBH__QJHwwRgpwXXRvauEealvTTUD2skZ9LZcktt5BRZdJ9nSL1S5_is1mpShgj4iOsizvz4sx_U-nap-n8n3ruTI3yT2JvAIUKVbIjfmaGgC5fpVNU1Ae5dDq7F642cByyTUHXMP6NZkaeqhGOsmMhH02S4nvPs6nCvFN9-jGQPlYs5QFLt6fEjVaX6eNNY?purpose=fullsize"},
 
 
-{id:18, title:"Honda CRF250R", category:"Honda", price:9200, specs:"250cc inline-4 · Sport fairing", img:"https://images.openai.com/static-rsc-4/3zWA0be08t_Gq14DcRLj5a14tAuAmjLjR_8hj_5ENCDKeKJT7SJaNNG-J_ajEI37e9EhC0Kmizcey7nYSqPFU514T4ZAoviqS96ENmlN3_v2P4AFZXDshwDo2-RpL0mfm2FJuqoFNB0KNqsJfz9bGzBuoyzsErswkNZ37GVZr_t3eeQCRGYl2MBli9JNNUz-?purpose=fullsizeg"},
+{id:18, title:"Honda CRF250R", category:"Honda", price:9200, specs:"250cc inline-4 · Sport fairing", img:"https://images.openai.com/static-rsc-4/3zWA0be08t_Gq14DcRLj5a14tAuAmjLjR_8hj_5ENCDKeKJT7SJaNNG-J_ajEI37e9EhC0Kmizcey7nYSqPFU514T4ZAoviqS96ENmlN3_v2P4AFZXDshwDo2-RpL0mfm2FJuqoFNB0KNqsJfz9bGzBuoyzsErswkNZ37GVZr_t3eeQCRGYl2MBli9JNNUz-?purpose=fullsize"},
 
 
 {id:18, title:"Honda CRF250RX", category:"Honda", price:9200, specs:"250cc inline-4 · Sport fairing", img:"https://images.openai.com/static-rsc-4/M1F3P0rQx9DQ_JeTL-ACW6LEqJ8AOxoP7ICSUA8AYq_m5m2XSEjsCgGuUdiiZ1twmWFi79F7ixnMkUzfTU7cguP-LqZmE4FrvO5EyoJR67cFvZnGly6dj4OablO1wNDJBFLUlmgQ8xDW0JX9oNrh7t9htbH4byWFZl7b5o8KKTuY981Y-Ss4CaYK9FAZoMz9?purpose=fullsize"},
@@ -322,10 +324,21 @@ const BIKES = [
 
 
 
-{id:18, title:"Honda CRF450R", category:"Honda", price:9200, specs:"450cc inline-4 · Sport fairing", img:"https://w0.peakpx.com/wallpaper/83/457/HD-wallpaper-honda-motorcycle-honda-cbr600rr-vehicles.jpg"},
+
 
 
 {id:18, title:"Honda CRF450RX", category:"Honda", price:9200, specs:"450cc inline-4 · Sport fairing", img:"https://images.openai.com/static-rsc-4/25Q80s8YOS7m7ToGzQl9Hz4mTmTt172aHWKgRwMYbw8wKNFnKRuU8CINTxhJL81xaleI9kGiHdLUyq-J-cAIN76HmuSibP5Q9goD5ZW0Oc9nwekBKuSEalAayjRqco9AgHvNLyO30ZLJ5nrsSt044x_EhzF6G2Uol4stbbX0EvgTaOGOCjrbec3LHOyG417V?purpose=fullsize"},
+
+
+
+
+
+{id:18, title:"Honda CRF450R", category:"Honda", price:9200, specs:"450cc inline-4 · Sport fairing", img:"https://images.openai.com/static-rsc-4/FFHyjHkGFz-NWgibWtsbI70GBYzd5LjwFv3-v5mQtedBAdaC3XYpjSxl49dZhzXcOIWIoh7BD9aGHQFsgbBUygR4z4SrfEnSOhURVqnsb7znksgOAak-7n8U75BFNDZPrXZ8OQYZbDzamOsmcoB3aTtBzWxzVDBkWehK2Gf-ZEz35R7A-SnZ6sgLxhNBXSnO?purpose=fullsize"},
+
+
+
+
+
 
 
 

@@ -559,16 +559,16 @@ footer{border-top:1px solid var(--line);padding:40px 24px;}
           <div class="field"><label>Address</label><input type="text" id="shipAddress" required></div>
           <div class="field-row">
             <div class="field"><label>City</label><input type="text" id="shipCity" required></div>
-            <div class="field"><label>ZIP Code</label><input type="text" id="shipZip" required></div>
+            
           </div>
         </div>
 
         <div class="summary-card">
           <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:14px;">Payment Method</h3>
           <div class="pay-methods">
-            <button class="pay-method active" data-method="card" onclick="setPayMethod('card')">Card</button>
-            <button class="pay-method" data-method="upi" onclick="setPayMethod('upi')">UPI</button>
-            <button class="pay-method" data-method="cod" onclick="setPayMethod('cod')">Cash on Delivery</button>
+            <button class="pay-method active" data-method="eSewa" onclick="setPayMethod('eSewa')">eSewa</button>
+            <button class="pay-method" data-method="Khalti" onclick="setPayMethod('Khalti')">Khalti</button>
+            <button class="pay-method" data-method="Cash" onclick="setPayMethod('cod')">Cash on Delivery</button>
           </div>
 
           <div id="payCardFields">

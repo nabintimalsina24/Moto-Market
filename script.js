@@ -3,18 +3,6 @@
 =================================================================== */
 const BIKES = [
 
-  //----- Scooter-----//
-
-  {id:1, title:"Trek Marlin 7", category:"Scooter", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80"},
-
-
-//----Cycle----//
-
-
-  {id:2, title:"Cannondale CAAD13", category:"Cycle", price:1450, specs:"Carbon fork · 105 groupset · Size 54", img:"https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=700&q=80"},
-
-
-
 
   //----- Helmet-----//
 
@@ -43,6 +31,36 @@ const BIKES = [
 
 
 {id:1, title:"Leatt", category:"Helmet", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://images.openai.com/static-rsc-4/49nF4NN-VyExHXdMII7eD0slDPgl-y5T4BavfvgYkP9-MYbmDI-y-oUZ65OH05nzq7pZXHZvVFHR0pVP1Hjg5NP60XXXZTUkGbF_O3eccW23uKfZ_hRx3Cq37LBL6pOh5VyTmCwwISA1r0WkhcxeJbp1g02FCfzntfo-tvXcoGnc3SFIpV9BQqDBsAvz47op?purpose=fullsize"},
+
+
+
+
+
+
+
+
+
+  //----- Scooter-----//
+
+  {id:1, title:"Trek Marlin 7", category:"Scooter", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=700&q=80"},
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----Cycle----//
+
+
+  {id:2, title:"Cannondale CAAD13", category:"Cycle", price:1450, specs:"Carbon fork · 105 groupset · Size 54", img:"https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=700&q=80"},
+
 
 
 
@@ -190,6 +208,63 @@ const BIKES = [
   {id:13, title:"Yamaha R15 V4", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://i.pinimg.com/736x/3a/51/eb/3a51ebc1c374b913e7dc18b43c4f4a4e.jpg"},
 
 
+
+{id:13, title:"Yamaha FZ Fi", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://images.openai.com/static-rsc-4/NBNspeSc81GajQ0RxIRcGXAf2M69Nj6XqINrPBmHCYCxJejufcngnVpjg_qWkbiyP2Vj2kOgaDlykJmAPcOEcS9ZqfFLO_CIUWxev6uGtDCtF4HLlhhyDU2OI4IA-U7Ev5NOLmjY2OKxWXHjaaNurXmSZ4_0VlsijWkZQZv5rbrydaNu-fkhI0g2wWCj8EL4?purpose=fullsize"},
+
+
+{id:13, title:"Yamaha FZ-S Fi V4", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://images.openai.com/static-rsc-4/1aUmPXEF7iXM7SEhp5Ys_3KYciTvTAJG5N-Bqw0g7fIanoAmWENLIOqT5wwORKXRaS7bOj5JFE6yvvzyeVjyoxQmm4DSu9H797eRId3rEylTjY0f-wABl_c_Jh_7HUZg1DNl8bfG_3oVOOJ8O0VEPe2Uw4EIt6C64UaHXiCHh5amduZIeVxm0wA5FpYkowF6?purpose=fullsize"},
+
+
+
+
+{id:13, title:"Yamaha FZ-X", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://wallpapercave.com/wp/wp9576327.jpg"},
+
+
+{id:13, title:"Yamaha MT-03", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://images.openai.com/static-rsc-4/L8tgJry4JneofvuEmCsyjxRF70r0qiD3Xh0D6L-e0UefJMsyAsYheg0zUTe12sOEN_UBHc8dsTLunQDk3QdouqmmlBYoxrKjaRYwcIks_kQghtuQekD-OKfr02fKUoVr23TYSo8iaDa9dHZ3RH0QPCmz8bZ5P0VhHT2xdA1KqPzB1W3AW6knzsv_cow5YABv?purpose=fullsize"},
+
+
+{id:13, title:"Yamaha MT-07", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC4OR9WwHYFODaKy_G2DU2vMQ6nVDXvwNVioKDrFlYei07ecOlhRNfwVn1&s=10"},
+
+
+{id:13, title:"Yamaha MT-09", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://wallpapercave.com/wp/wp3063463.jpg"},
+
+
+{id:13, title:"Yamaha MT-10", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://wallpapercat.com/w/full/0/d/2/1712764-3000x2000-desktop-hd-yamaha-mt-10-background-photo.jpg"},
+
+
+{id:13, title:"Yamaha XSR155", category:"Yamaha", price:4200, specs:"155cc · Liquid-cooled · 6-speed", img:"https://images.openai.com/static-rsc-4/isXC-rCwc3qkpRNkzenOT1eJLjYbmXB-C3pOYPLSFclraTOtif_Sav77xJURKqa5tWWyjqJTfKE9JhQVBL4nPxuokgpN0gYl6efo_7t892B6WLhujE44wmjIkLa2t5E4Wtoh6yoGMWwcc5zuHYve2XG7bk3rt1XcaM4RV3kjRLsS3Fc7qOKq3DZl4yDHySf2?purpose=fullsize"},
+
+
+{id:13, title:"Yamaha XSR700", category:"Yamaha", price:4200, specs:"700cc · Liquid-cooled · 6-speed", img:"https://images.openai.com/static-rsc-4/ev5tj7zYgLUo2xiQ7eNnb-NHxBy3pjdjBZQvz7MnuyuOedkZY0VUKubt2eSbuL7_Bwb0-_ZQgZSQlxFRkr2u9zvCbzB4f1gdnNb65R9eLr6k0v0iT-e6TasG5PARNW60uis0SPYkuigBYiZ5HHQ7YrcqglYXljqjsf_Sq5aVIK7FeHKJkzam7YWLtDgowhZa?purpose=fullsize"},
+
+
+
+{id:13, title:"Yamaha XSR900", category:"Yamaha", price:4200, specs:"900cc · Liquid-cooled · 6-speed", img:"https://images.openai.com/static-rsc-4/0iz0ATPzsmGmj768F2XHgUEkYxhTk6PLKXh2Aay9GVcjsXxEaw2TuiUuGrlbHAhKqdFrZy7WpuwQ_vHcrvONmZcVhMxlVZ2c7SCbgpG_OGumY7OoZaA5O2VGBQQRxYUFBdoA-LfF1YpaIy-JBJNx5448vIEmspwTuFMVjEq5TLsJY3sfdTUOIOFM2aMaUQJ4?purpose=fullsize"},
+
+
+{id:13, title:"Yamaha R3 — 321cc", category:"Yamaha", price:4200, specs:"321cc · Liquid-cooled · 6-speed", img:"https://images5.1000ps.net/images_bikekat/2019/4-Yamaha/7961-YZF-R3/001.jpg?format=webp&quality=80&trim.threshold=80&trim.percentpadding=1&scale=both&width=1168&height=664&bgcolor=rgba_39_42_44_0&mode=pad"},
+
+
+{id:13, title:"Yamaha R7 — 689cc", category:"Yamaha", price:4200, specs:"689cc · Liquid-cooled · 6-speed", img:"https://cdn2.yamaha-motor.eu/prod/product-assets/2026/YZF700R7/2026-Yamaha-YZF700R7-EU-NA-Detail-002-03_Mobile.jpg"},
+
+
+{id:13, title:"Yamaha YZF-R1 — 998cc", category:"Yamaha", price:4200, specs:"998cc · Liquid-cooled · 6-speed", img:"https://images.openai.com/static-rsc-4/X-H32C9IDuFXNfTxhp6GH-Eh0Yqwa3DkEai-ZkqGS3uFLygV_SEFkaHVJ2_TUqZ73i_-ZzLHKuIhUj7JTVdNcdzMR52pF2F-wFB5neR4DkxuN3bC0vfoRoAFXzEaHunS6KYnlH3DgZEIMNaqWQ-Iqc8tfRqmcboFuV5xAUQY4ExMZFviGrSg8gm0TacqmA8f?purpose=fullsize"},
+
+
+{id:13, title:"Yamaha YZF-R1M — 998cc", category:"Yamaha", price:4200, specs:"998cc · Liquid-cooled · 6-speed", img:"https://c4.wallpaperflare.com/wallpaper/929/297/283/4k-2018-yamaha-yzf-r1m-wallpaper-preview.jpg"},
+
+
+
+
+
+
+
+
+
+
+
+
+
   {id:14, title:"Yamaha MT-15", category:"Yamaha", price:3950, specs:"Naked street · 155cc · LED lighting", img:"https://iamabiker.com/wp-content/uploads/2022/07/Yamaha-MT-15-V2-HD-wallpaper-1-1536x864.jpg"},
 
 
@@ -253,12 +328,11 @@ const BIKES = [
 
 
   
-{id:14, title:"Yamaha R3 — 321cc", category:"Yamaha", price:3950, specs:"Naked street · 321cc · LED lighting", img:"https://images.openai.com/static-rsc-4/BlMHbII32Mc_GViw7Fzl-q3uudhEFqD6hWpxSBEONNJjXGa0y-DVKAK29e_n11ZCdXam__irb8nYrT5B_HPJSUxoSmvvsVMOms5owewpzoIGDcRrRPccJ1yQtI6W6wWA5WGS6EuroCaAyYaWvcUqsuC4LYmmwhcRarMuo7J92E49JghTED8atgHK6dvhyyEf?purpose=fullsize"},
 
 
 
 
-{id:14, title:"Yamaha R7 — 689cc", category:"Yamaha", price:3950, specs:"Naked street · 689cc · LED lighting", img:"https://images.openai.com/static-rsc-4/_njsbTZSLSp3FoQectDtQmSUwp7zlDjppMWtqO-nbx96F-hmipdyA0xcWQ1maWzVlFhEaE6lfztNoSV2bAJHpuPe10VaZg7BOuXRc-ug_RZOGDFQE4PC3uxxhxCD-bXGVMo-wvfSDFztp2Zw_4ogkQLJL7sRYO1GZu4ciaU_E9zYexUuSX9TMFu9II5MZa4R?purpose=fullsize"},
+
 
 
 

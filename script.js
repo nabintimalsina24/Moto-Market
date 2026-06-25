@@ -16,14 +16,37 @@ const BIKES = [
 
 
 
+  //----- Helmet-----//
+
+  {id:1, title:"AGV", category:"Helmet", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR40578Zxww7uv0DuMFVjdqPUZnun3yINpmGUfNnmNpIg&s=10"},
 
 
+
+
+  {id:1, title:"Shoei", category:"Helmet", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://elite-exclusives.co.uk/wp-content/uploads/2023/01/Marc-Marquez-2019-helmet-1_8-2.jpg"},
+  
+
+  {id:1, title:"KYT", category:"Helmet", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://images.openai.com/static-rsc-4/2BIyBd_ylaHlHHYX-unogTOBfy-GpqJWOPpGwjKm3VxStqCPcq_goaJukn_t2dSKS0EKnM8OUgmT7bSv8FgvS0OSodHYRh2UzBkj5QRMK7sSoBhtTXW0ol0uq1h7LjBI3PbCatbtyRjRCh7QXtM7yW0buhCMcbkW1Z9kyP1XH7ajePng8BOxIXW9t_cPjKdo?purpose=fullsize"},
+  
+
+  {id:1, title:"Steelbird", category:"Helmet", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://images.openai.com/static-rsc-4/fxVpQ7hA6pWCLNfq6swCWPewbB07x4obHHzQE5IdmfcE1QMOk1E0MV4qgGyEmXT3gqNmOsyrX_7WNh-X3eKT5NvvyCluGHAhQm2hf71t91tB4JYjcgcf79hMpH9k0bBzoWTQOZuwGMHADk3oLGIwb-7hm28_gH5m1pekFeHUZXjDnF9UdpbjgXIvU2eT3V1E?purpose=fullsize"},
+
+
+  {id:1, title:"LS2", category:"Helmet", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://cdn-iutgbvdd.sportsbikeshop.co.uk/image/upload/c_fill,h_600,w_600/product/907508_1.jpg"},
+
+
+{id:1, title:"Arai", category:"Helmet", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://images.openai.com/static-rsc-4/ahPXBonmqGes6kaB77LDpYesCUUs2xW4AzHAl0fY9rKr5UnIqc5YTyS3pZBvaYF2GM727F6sYpe-Bp0jdS8uKog9dJq1FkzZ_OAirZHeOSu9oivlM0sm6qS5CV93yRzMVHp7g-2PvF16NlUrpSnZA4bghJB4c_8-bs7sDZ4E8IGxuxNO_r81OgDgbUNR_elK?purpose=fullsize"},
 
   
 
+{id:1, title:"SMK", category:"Helmet", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://images.openai.com/static-rsc-4/53aQNAto-K-pHfsC4NPh28aklqMwpyuqnsPnosXAuJi1GR9LTQ9dqG3-9uYGDwCjzkCWY5pVTc-xsxlpxV3VvBq4FNDnTQDXkBzhrfVFCtctkqBy9lwupWoW-f4TidjfqmyYs-j_I_DZU8OpmVtOheQh9Dax-5E0Uffj9BfbgsHqpNSgyDbeX5ejuMUg8CsJ?purpose=fullsize"},
 
-  
-  
+
+{id:1, title:"Leatt", category:"Helmet", price:780, specs:"21-speed · Frame M · Disc brakes", img:"https://images.openai.com/static-rsc-4/49nF4NN-VyExHXdMII7eD0slDPgl-y5T4BavfvgYkP9-MYbmDI-y-oUZ65OH05nzq7pZXHZvVFHR0pVP1Hjg5NP60XXXZTUkGbF_O3eccW23uKfZ_hRx3Cq37LBL6pOh5VyTmCwwISA1r0WkhcxeJbp1g02FCfzntfo-tvXcoGnc3SFIpV9BQqDBsAvz47op?purpose=fullsize"},
+
+
+
+
         /*---- CrossFire Bikes ----*/
 
   {id:6, title:"Crossfire XR 250 — 250cc", category:"CrossFire", price:980, specs:"Aluminum frame · Shimano Claris", img:"https://images.openai.com/static-rsc-4/mtNP6a8QVn6ystJgnqpobdfIGxarlYfq8wwZt8VjZzjVrwRMPjZFMtkV9Pqr1RAOGJp1_8YcDumpnXSN_IcTLaFyxGT0EjTKWW1GkyymRZpO6BCVB7WT85gmy5oF20ip2jKwpKiXji2ngXR1b48eSAvB4bxc_UDPrPtend3mjLBjsf4iVB2TKqG10KVCACeg?purpose=fullsize"},

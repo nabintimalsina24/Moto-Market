@@ -519,14 +519,102 @@ const BIKES = [
 
             //Bajaj Bikes
 
-  {id:19, title:" Pulsar NS200", category:"Bajaj", price:2600, specs:"199cc · Perimeter frame · Sporty", img:"https://i.pinimg.com/736x/9f/36/cb/9f36cb4aa352a082dfa16d8b82ed499e.jpg"},
 
 
-  {id:20, title:" Dominar 400", category:"Bajaj", price:3800, specs:"373cc tourer · Twin-channel ABS", img:"https://images.unsplash.com/photo-1644879796743-32f929189b81?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
+{id:19, title:" Bajaj Pulsar NS200", category:"Bajaj", price:2600, specs:"200cc · Perimeter frame · Sporty", img:"https://wallpapercave.com/wp/wp3921659.jpg"},
 
-  {id:19, title:" Pulsar 220", category:"Bajaj", price:2600, specs:"200cc · Perimeter frame ", img:"https://w0.peakpx.com/wallpaper/87/537/HD-wallpaper-pulsar220-220f-pulsar.jpg"},
 
-{id:19, title:" Pulsar 150", category:"Bajaj", price:2600, specs:"150cc", img:"https://w0.peakpx.com/wallpaper/62/192/HD-wallpaper-pulsar-150-bajaj-pulsar-150-motorcycle.jpg"},
+
+{id:19, title:" Bajaj Pulsar N250", category:"Bajaj", price:2600, specs:"250cc · Perimeter frame · Sporty", img:"https://wallpapercave.com/wp/wp10903307.jpg"},
+
+
+
+
+{id:19, title:" Bajaj Pulsar F250", category:"Bajaj", price:2600, specs:"250cc · Perimeter frame · Sporty", img:"https://images.hindustantimes.com/auto/img/2025/01/04/960x540/Bajaj_Pulsar_F250_1635411689310_1735966952199.jpg"},
+
+
+
+
+
+{id:19, title:" Bajaj Pulsar NS400Z", category:"Bajaj", price:2600, specs:"400cc · Perimeter frame · Sporty", img:"https://cdn-s3.autocarindia.com/Bajaj/Pulsar-NS400Z/Z62_4887.JPG?w=728&q=75"},
+
+
+
+
+{id:19, title:" Bajaj Dominar 250", category:"Bajaj", price:2600, specs:"250cc · Perimeter frame · Sporty", img:"https://asset.autocarindia.com/static/image-galleries/images/20260219_100905_8ef523b2.jpg?w=728&q=75"},
+
+
+
+
+{id:19, title:" Bajaj Dominar 400", category:"Bajaj", price:2600, specs:"400cc · Perimeter frame · Sporty", img:"https://images.tractorjunction.com/Bajaj_Dominar_400_1_dfd8bcb5a2.webp?format=webp&quality=40"},
+
+
+
+
+{id:19, title:" Bajaj Avenger Street 160", category:"Bajaj", price:2600, specs:"160cc · Perimeter frame · Sporty", img:"https://wallpapercave.com/wp/wp3804357.jpg"},
+
+
+
+
+{id:19, title:" Bajaj Avenger Cruise 220", category:"Bajaj", price:2600, specs:"220cc · Perimeter frame · Sporty", img:"https://images.openai.com/static-rsc-4/FUSG1VCpkAkJxQVTzw4IMK3Tkq-WITrM_b8xb1QIriCIn3kXON2smKk5Rks7GmN5VTBCURWLv2lGGJ6K6kkBbBjrPiDEU2qD4D2xGIkq5bz81z8jaisfFksN-gPNXQcGAf9ZO54GtjZ5USA7YzUxRzHRbi_twG7SL1K0i6oVgLXf3wDTFlcjzkECB7Glz0y9?purpose=fullsize"},
+
+
+
+
+
+
+
+
+
+  
+{id:19, title:" Bajaj Platina 100", category:"Bajaj", price:2600, specs:"100cc · Perimeter frame · Sporty", img:"https://images.openai.com/static-rsc-4/4KjSZTQpcoCZ4ZOzqTxw3ui0ffZOjEok4y5kwt-Mj8XDw5jKVJU_St7SphsdIXVqumoU7BOLUYhKm_0GXHUBPvox3Bpjvb4X2Mc1l2X1oJ7qThVMzvlxssMZ8OkpspAwcij2MhpJhZb32xy8Cm6o9jfLbDMfc8twcEOgSK_E5J8jUo-lt1LjV2hZUVetKy6N?purpose=fullsize"},
+
+
+
+
+
+
+{id:19, title:" Bajaj Platina 110", category:"Bajaj", price:2600, specs:"110cc · Perimeter frame · Sporty", img:"https://images.timesdrive.in/photo/msid-151073157,thumbsize-0/151073157.jpg"},
+
+
+
+
+{id:19, title:" Bajaj CT110X", category:"Bajaj", price:2600, specs:"110cc · Perimeter frame · Sporty", img:"https://images.openai.com/static-rsc-4/7GdDi-fvbzsx8P9tthGyj356IOBQ58OtR5kE3eUeffQZJeqMPdFzgsEhKIbtq8fcytahB7vMYGbvIftdzL6poJVvRRnpu3qGKAp0IYBoUzZZhirMVkxIw_eEuxuxcDN3UMAe9n0tHeEqJWyXwD10gHw0_Ysp6o7G_Mj30Zp8CQPgwzC3tNOTDOxWqVOV-qsn?purpose=fullsize"},
+
+
+
+
+{id:19, title:" Bajaj Pulsar 125", category:"Bajaj", price:2600, specs:"125cc · Perimeter frame · Sporty", img:"https://images.openai.com/static-rsc-4/4YxXqwVskRof1M5RY84V0Da2CQVrPXKHRexSo4Ke3--kalfNSTAqbX0jIJdTfzB3YWtFSkCOXLLCwGyQgJXUDRneRFUK6KByXGZw8jD8nr9PGAK06WL_J3z_zbXPMtUI-2JkCXFQDsFQVOsjpxj3yMBWmy2RPTjDZAfzbKGiGpXrg5HVzgWsPFX_PoNG8_LL?purpose=fullsize"},
+
+
+
+
+{id:19, title:" Bajaj Pulsar N125", category:"Bajaj", price:2600, specs:"125cc · Perimeter frame · Sporty", img:"https://images.openai.com/static-rsc-4/4KjSZTQpcoCZ4ZOzqTxw3ui0ffZOjEok4y5kwt-Mj8XDw5jKVJU_St7SphsdIXVqumoU7BOLUYhKm_0GXHUBPvox3Bpjvb4X2Mc1l2X1oJ7qThVMzvlxssMZ8OkpspAwcij2MhpJhZb32xy8Cm6o9jfLbDMfc8twcEOgSK_E5J8jUo-lt1LjV2hZUVetKy6N?purpose=fullsize"},
+
+
+
+
+{id:19, title:" Bajaj Pulsar NS125", category:"Bajaj", price:2600, specs:"125cc · Perimeter frame · Sporty", img:"https://images.openai.com/static-rsc-4/0Z27be3wjBsc4o8_e_WFguaok3wy5AZXeLGI6rW1Hkcp3bZhdwZ0ty-npQ596bTvFhckHDWS23sklz5fO_aBpdVMD0p8eS0SPH1CEZn6i45Ddc_PJXZ0VnA28N6keA7imYdY8xwao1pzyU2p8zLWudcTgYseli3h6xfslAXXunuCQ0Q6VayhJ57mdmiYngPY?purpose=fullsize"},
+
+
+{id:19, title:" Bajaj Pulsar N150", category:"Bajaj", price:2600, specs:"150cc · Perimeter frame · Sporty", img:"https://images.openai.com/static-rsc-4/KlNlUDDTeWASvPiiSRZWOOu9wh2X_7Fvf6k-ahIpN8gAEaNyCiyPeLAwa5sri_TRQsl-vSQDELrmUSLqDZ6UWFNwQmPRbagUAdE4pp9M3bRgbKmmLNVZ0r_A3ka9PD1GD8PVRvoFD9y1naBfD6ynZeRo8eMwX6CVHr2irAdqce0atpCggHbJ4p0MCQMaVmai?purpose=fullsize"},
+
+
+
+
+
+{id:19, title:" Bajaj Pulsar P150", category:"Bajaj", price:2600, specs:"150cc · Perimeter frame · Sporty", img:"https://images.openai.com/static-rsc-4/YjLacW-37VGC6dEHU_D8GZxMgNGefQQDt1S8NSL5wQxftElr00kvRKkcP5YP2-z7KWssusujXs2XjcecejMvyFvnNmFOj2neChph8mWIgPUWsA4twGuXQ4EW14nZGwRJTaZ9D24i3iGZIEdlM6yBjKAKpZ96MhAFUQ0okeQFSNsRSaIcO1DK3BVSzlOYu3EE?purpose=fullsize"},
+
+
+{id:19, title:" Bajaj Pulsar N160", category:"Bajaj", price:2600, specs:"160cc · Perimeter frame · Sporty", img:"https://wallpaperaccess.com/full/20047164.jpg"},
+
+
+
+
+
+{id:19, title:" Bajaj Pulsar NS160", category:"Bajaj", price:2600, specs:"160cc · Perimeter frame · Sporty", img:"https://images.openai.com/static-rsc-4/mfwi7gKks48kQJ1Z_BcvvtUDdkFGkUyiD78nR-zir0JzwGG1wZrQ3cucQ1aR5pxDMe1AWObokbv5Auc8dsmDtKm_po232K4WlbWHsf1pFO9BeGdQ0XZ2bYkut-qH-3wK2fjh16TDqKVpaECnKtdtHirCKLfI_UYt_AWxlQXOapLBx5LUucuxCRayD-5zXHpK?purpose=fullsize"},
+
+
 
 
 

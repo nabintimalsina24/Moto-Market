@@ -362,11 +362,139 @@ const BIKES = [
    //---- KTM Bikes ----//
 
 
-  {id:15, title:"KTM Duke 390", category:"KTM", price:5800, specs:"373cc single · TFT display · ABS", img:"https://images.unsplash.com/photo-1608975213589-14e7f23aeab7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHVrZSUyMDM5MHxlbnwwfHwwfHx8MA%3D%3D"},
+  {id:15, title:"KTM 125 Duke", category:"KTM", price:5800, specs:"125cc single · TFT display · ABS", img:"https://images.openai.com/static-rsc-4/MY9VQ0u8qFDUassTL2NaXhiQpP6H1HHfZlgL4pCA0XbOr4Wt0O-CGSKlWEWy30upE9u6V4SfO4VHUpt9ZR3h1JXoxV1f4kR3JBZOtGn43ieM027JAmM_fzTv2jNQ88ogF6plRIOJPMhL7fWFqYVuTF50op-1y71-kS6cj-2gGh4epcbiNVlIIwbND4snYzGL?purpose=fullsize"},
   
-  {id:16, title:"KTM 1390 Super Duke R", category:"KTM", price:12000, specs:"190 HP.V-Twin", img:"https://i.pinimg.com/1200x/af/f1/62/aff162e5c6474dea2f8c1fe3ba04887c.jpg"},
+  
 
-{id:16, title:"KTM RC 390", category:"KTM", price:6100, specs:"Track-focused fairing · Slipper clutch", img:"https://i.pinimg.com/736x/91/bf/19/91bf193473f61501b1557ed2d0794c75.jpg"},
+  {id:15, title:"KTM 200 Duke", category:"KTM", price:5800, specs:"200cc single · TFT display · ABS", img:"https://wallpaperaccess.com/full/3787444.jpg"},
+
+
+
+
+
+
+
+
+
+
+
+{id:15, title:"KTM 250 Duke", category:"KTM", price:5800, specs:"250cc single · TFT display · ABS", img:"https://wallpapercave.com/wp/wp10585859.jpg"},
+
+
+{id:15, title:"KTM 390 Duke", category:"KTM", price:5800, specs:"390cc single · TFT display · ABS", img:"https://images.openai.com/static-rsc-4/rRUZ_xlZzovdQgbwS_Dpj3Vg0cn4w-XgQVuFGYcyUo0mVZWQjZYTeYxuWQl66SmjmKnQB-LaVi6-KlBC55OaH6RDr6saIQ4p8e3YjrVfhjeYNF6Hy2I-E7Yc9HXrMvkparEYdWTMP6BGkD5WpcMsVJrWj7jYKFnvrNiwfDt4a3eJpmkIpnh-HSjXfTcLUkHO?purpose=fullsize"},
+
+
+
+{id:15, title:"KTM 790 Duke", category:"KTM", price:5800, specs:"790cc single · TFT display · ABS", img:"https://w0.peakpx.com/wallpaper/115/620/HD-wallpaper-ktm-790-duke-close-up-2019-bikes-r-superbikes-2019-ktm-790-duke-austrian-motorcycles-ktm.jpg"},
+
+
+
+
+
+
+
+///baki yah bata
+
+{id:15, title:"KTM 890 Duke", category:"KTM", price:5800, specs:"890cc single · TFT display · ABS", img:"https://infomoto.com.au/wp-content/uploads/2022/02/KTM_890_Duke_GP_2022_1.jpg"},
+
+
+
+{id:15, title:"KTM 990 Duke", category:"KTM", price:5800, specs:"990cc single · TFT display · ABS", img:"https://fariolisrl.com/storage/media/2328/558991-my24-ktm-990-duke-orange-eu-global-front-right-studio-global-europe-studio-03-studio.jpg"},
+
+
+
+{id:15, title:"KTM 1390 Super Duke R", category:"KTM", price:5800, specs:"1390cc single · TFT display · ABS", img:"https://cdn-fastly.motorcycle.com/media/2024/05/22/16051/s-2024-ktm-1390-super-duke-r-evo-gallery.jpg?size=720x845&nocrop=1"},
+
+
+
+{id:15, title:"KTM 1390 Super Duke R EVO", category:"KTM", price:5800, specs:"200cc single · TFT display · ABS", img:"https://imgcdn.zigwheels.my/large/gallery/exterior/63/2382/ktm-1390-super-duke-r-slant-rear-view-full-image-646035.jpg"},
+
+
+
+{id:15, title:"KTM RC 125", category:"KTM", price:5800, specs:"125cc single · TFT display · ABS", img:"https://www.dadamotors.com/all/superadmin/bikeimage2/ktm-rc-125-02.webp"},
+
+
+
+{id:15, title:"KTM RC 200", category:"KTM", price:5800, specs:"200cc single · TFT display · ABS", img:"https://wallpapercave.com/wp/wp6213156.jpg"},
+
+
+
+
+
+
+{id:15, title:"KTM RC 390", category:"KTM", price:5800, specs:"390cc single · TFT display · ABS", img:"https://wallpaperaccess.com/full/1880954.jpg"},
+
+
+
+
+
+
+
+{id:15, title:"KTM 200 Duke", category:"KTM", price:5800, specs:"200cc single · TFT display · ABS", img:"https://wallpaperaccess.com/full/3787444.jpg"},
+
+
+
+
+
+{id:15, title:"KTM 200 Duke", category:"KTM", price:5800, specs:"200cc single · TFT display · ABS", img:"https://wallpaperaccess.com/full/3787444.jpg"},
+
+
+
+
+
+{id:15, title:"KTM 200 Duke", category:"KTM", price:5800, specs:"200cc single · TFT display · ABS", img:"https://wallpaperaccess.com/full/3787444.jpg"},
+
+
+
+
+
+
+{id:15, title:"KTM 200 Duke", category:"KTM", price:5800, specs:"200cc single · TFT display · ABS", img:"https://wallpaperaccess.com/full/3787444.jpg"},
+
+
+
+{id:15, title:"KTM 200 Duke", category:"KTM", price:5800, specs:"200cc single · TFT display · ABS", img:"https://wallpaperaccess.com/full/3787444.jpg"},
+
+
+
+{id:15, title:"KTM 200 Duke", category:"KTM", price:5800, specs:"200cc single · TFT display · ABS", img:"https://wallpaperaccess.com/full/3787444.jpg"},
+
+
+
+{id:15, title:"KTM 200 Duke", category:"KTM", price:5800, specs:"200cc single · TFT display · ABS", img:"https://wallpaperaccess.com/full/3787444.jpg"},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*---- Honda Bikes ----*/
 
@@ -561,11 +689,6 @@ const BIKES = [
 
 
 
-
-
-
-
-
   
 {id:19, title:" Bajaj Platina 100", category:"Bajaj", price:2600, specs:"100cc · Perimeter frame · Sporty", img:"https://images.openai.com/static-rsc-4/4KjSZTQpcoCZ4ZOzqTxw3ui0ffZOjEok4y5kwt-Mj8XDw5jKVJU_St7SphsdIXVqumoU7BOLUYhKm_0GXHUBPvox3Bpjvb4X2Mc1l2X1oJ7qThVMzvlxssMZ8OkpspAwcij2MhpJhZb32xy8Cm6o9jfLbDMfc8twcEOgSK_E5J8jUo-lt1LjV2hZUVetKy6N?purpose=fullsize"},
 
@@ -584,12 +707,12 @@ const BIKES = [
 
 
 
-{id:19, title:" Bajaj Pulsar 125", category:"Bajaj", price:2600, specs:"125cc · Perimeter frame · Sporty", img:"https://images.openai.com/static-rsc-4/4YxXqwVskRof1M5RY84V0Da2CQVrPXKHRexSo4Ke3--kalfNSTAqbX0jIJdTfzB3YWtFSkCOXLLCwGyQgJXUDRneRFUK6KByXGZw8jD8nr9PGAK06WL_J3z_zbXPMtUI-2JkCXFQDsFQVOsjpxj3yMBWmy2RPTjDZAfzbKGiGpXrg5HVzgWsPFX_PoNG8_LL?purpose=fullsize"},
+{id:19, title:" Bajaj Pulsar 125", category:"Bajaj", price:2600, specs:"125cc · Perimeter frame · Sporty", img:"https://wallpapercave.com/wp/wp9482239.jpg"},
 
 
 
 
-{id:19, title:" Bajaj Pulsar N125", category:"Bajaj", price:2600, specs:"125cc · Perimeter frame · Sporty", img:"https://images.openai.com/static-rsc-4/4KjSZTQpcoCZ4ZOzqTxw3ui0ffZOjEok4y5kwt-Mj8XDw5jKVJU_St7SphsdIXVqumoU7BOLUYhKm_0GXHUBPvox3Bpjvb4X2Mc1l2X1oJ7qThVMzvlxssMZ8OkpspAwcij2MhpJhZb32xy8Cm6o9jfLbDMfc8twcEOgSK_E5J8jUo-lt1LjV2hZUVetKy6N?purpose=fullsize"},
+{id:19, title:" Bajaj Pulsar N125", category:"Bajaj", price:2600, specs:"125cc · Perimeter frame · Sporty", img:"https://bd.gaadicdn.com/upload/userfiles/images/67175e66e8ac4.jpg"},
 
 
 
@@ -622,7 +745,23 @@ const BIKES = [
 
   {id:21, title:"Royal Enfield Classic 350", category:"Royal Enfield", price:4300, specs:"349cc thump · Retro styling", img:"https://images.unsplash.com/photo-1622185135505-2d795003994a?w=700&q=80"},
 
-   {id:21, title:"Royal Enfield Super Meteor 650", category:"Royal Enfield", price:4300, specs:"650cc thump · Retro styling", img:"https://wallpaperaccess.com/full/23189321.jpg"},
+
+  {id:21, title:"Royal Enfield Bullet 350", category:"Royal Enfield", price:4300, specs:"349cc thump · Retro styling", img:"https://imgcdn.zigwheels.my/large/gallery/exterior/89/1410/royal-enfield-bullet-350-slant-front-view-full-image-911075.jpg"},
+
+
+
+
+{id:21, title:"Royal Enfield Classic 650", category:"Royal Enfield", price:4300, specs:"648cc thump · Retro styling", img:"https://4kwallpapers.com/images/wallpapers/royal-enfield-5120x2880-24516.jpg"},
+
+
+
+   {id:21, title:"Royal Enfield Super Meteor 350", category:"Royal Enfield", price:4300, specs:"350cc ", img:"https://akm-img-a-in.tosshub.com/indiatoday/images/story/202101/DSC_4066_C_1200x768.jpeg?size=690:388"},
+
+
+
+
+
+   {id:21, title:"Royal Enfield Super Meteor 650", category:"Royal Enfield", price:4300, specs:"650cc thump · Retro styling", img:"https://paultan.org/image/2022/11/2022-Royal-Enfield-650-Super-Meteor-1-630x483.jpeg"},
 
  {id:21, title:"Royal Enfield Bear 650", category:"Royal Enfield", price:4400, specs:"650cc thump · Retro styling", img:"https://external-preview.redd.it/wonder-why-royal-enfield-is-calling-its-latest-the-bear-650-v0-c-s9JsPCOlY7A7Igq2tvltpkGxje83z0SkgExf-xYIM.jpg?auto=webp&s=d74e535c6756e1746c5f3535c26f96a3d0bfff94"},
 
@@ -630,7 +769,56 @@ const BIKES = [
   {id:21, title:"Royal Enfield Himalayan 450", category:"Royal Enfield", price:4500, specs:"450cc thump · Retro  styling", img:"https://static0.hotcarsimages.com/wordpress/wp-content/uploads/2024/05/2024-royal-enfield-himalayan-450-official-teaser-1.jpeg?w=1600&h=900&fit=crop"},
 
   
-  {id:22, title:"Royal Enfield Hunter 350", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://imgcdn.zigwheels.my/large/gallery/exterior/89/1881/royal-enfield-hunter-350-right-side-viewfull-image-390792.jpg"},
+  {id:22, title:"Royal Enfield Himalayan 411", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://wallpapercave.com/wp/wp14790819.jpg"},
+
+
+
+  {id:22, title:"Royal Enfield Interceptor 650", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://static0.topspeedimages.com/wordpress/wp-content/uploads/2022/12/royal-enfield-interceptor-650.jpg"},
+
+
+
+  {id:22, title:"Royal Enfield Continental GT 650", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://images.openai.com/static-rsc-4/MDIsN8bNmSyKiFSyi2syK7sZxUcWf9yR7NbJC9JSrcE02BNX3zkqICbSM7npbERuiD5yY30trSDTS2kSBpSnE4Zm3f7QtQXIN0-329VzwzAOHEJEd1LxhXrhAFnmhi1KR0rOn4LOoHUzQQsye3gPztkzeVVzD8dxzpMJl7HR6XbXkQf3NumWCvImWqg1YvVU?purpose=fullsize"},
+
+
+
+
+
+  {id:22, title:"Royal Enfield Shotgun 650", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://images.openai.com/static-rsc-4/dsyd8Rzm5yV4C7r_JbVC4beTgvidEMpuXcilxOss7l67R9Zy9Gctb0qLFubivmzCy40qP8SA98WVFjgD2hOyAHg4dK2yyoBPWRV42wAST1EBy7Wc92BZAEk1ngKsoNqCb6FB06d9y6fR6PXyo6haCB3NMpiOW1BBMY1uCxzzP7zauQ6ow7Ak3qttqXz1kjer?purpose=fullsize"},
+
+
+
+
+
+  {id:22, title:"Royal Enfield Scram 411", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://wallpapercave.com/wp/wp11961084.jpg"},
+
+
+
+
+  {id:22, title:"Royal Enfield Scram 440", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://images.carandbike.com/cms/articles/2024/11/3205535/Royal_Enfield_Scram_440_7b49d3d968.jpg"},
+
+
+
+
+  {id:22, title:"Royal Enfield INT650", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://images.openai.com/static-rsc-4/haPvQxc1emHDXN2Sw8ylGIkqieBtu65-GF59F7H5YL7_SK9arJw_VE_lnKboDIC1CmQXhrzNAfKK0Dco3EjFRksYwTKGifaU1AI4lAbVCQmH5VMlcCGz9v1PQsNF_zBGr4qLcs9X132g1DC_NGvScq2-Oeh-Pl6LnbM04lxSmL0K9dt2jTD-n0DgpueAAqF5?purpose=fullsize"},
+
+
+
+
+  {id:22, title:"Royal Enfield Continental GT 650", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://images.openai.com/static-rsc-4/Z0_b85TTT4KLiT0gbe9kksS2PtGdnPJCg353VU0LhzsPtQ5DFqqJsZs2M2MWfCnjvSGU2CNLbC-9sDcPhtuz07_PjEoGgTIq7lzRNOeEYpIvGfGxLhljiltq7960mFoDiM5_vjFfwP3WmkrNivWX7CY2bLTGumD_RCX_m93PrKA_ElXKdCRSBRATNIhNsy_o?purpose=fullsize"},
+
+
+
+{id:22, title:"Royal Enfield Flying Flea C6", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://images.openai.com/static-rsc-4/W1AsMH8D2tr5UobAkxAiqLWI92d3hvxG-mAdxF8m-RfjE_IGuSScKzqkw-zwG8wGtaCw4zDZ_hirs9sEBsquuJUGS8IuJZYCVE8RgkPmZD2MMOVnTeqdiTMdMHg4oeUkWT3KzhNx-6j4mP3XemGjYWYgDIsloGf6K61rAZqy_vDDp0wYIG_YrApHKFJljhgE?purpose=fullsize"},
+
+
+
+{id:22, title:"Royal Enfield Flying Flea S6", category:"Royal Enfield", price:5400, specs:"Single-cylinder, air–oil cooled J-series engine", img:"https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcms%2Farticles%2F2025%2F11%2F3205535%2FRE_Flying_Flea_S6_m1_e678915d71.jpg&w=1920&q=90"},
+
+
+
+
+
+
 
 
   /*---- Triumph Bikes ----*/
